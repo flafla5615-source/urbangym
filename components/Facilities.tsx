@@ -13,6 +13,8 @@ const zones = [
     span: "lg:col-span-7",
     height: "h-[300px] sm:h-[420px] lg:h-[560px]",
     sizes: "(max-width: 1024px) 100vw, 58vw",
+    /* 세로 사진을 가로 영역에 맞추기 위한 크롭 기준점 */
+    position: "center 58%",
   },
   {
     name: "유산소존",
@@ -21,6 +23,7 @@ const zones = [
     span: "lg:col-span-5",
     height: "h-[300px] sm:h-[420px] lg:h-[560px]",
     sizes: "(max-width: 1024px) 100vw, 40vw",
+    position: "center 58%",
   },
   {
     name: "프리웨이트존",
@@ -29,6 +32,7 @@ const zones = [
     span: "lg:col-span-5",
     height: "h-[300px] sm:h-[380px] lg:h-[480px]",
     sizes: "(max-width: 1024px) 100vw, 40vw",
+    position: "center 62%",
   },
   {
     name: "스트레칭존",
@@ -37,6 +41,7 @@ const zones = [
     span: "lg:col-span-7",
     height: "h-[300px] sm:h-[380px] lg:h-[480px]",
     sizes: "(max-width: 1024px) 100vw, 58vw",
+    position: "center 52%",
   },
 ];
 
@@ -62,6 +67,7 @@ export default function Facilities() {
                   src={zone.src}
                   alt={`어반짐 ${zone.name}`}
                   sizes={zone.sizes}
+                  position={zone.position}
                   className={`w-full ${zone.height}`}
                 />
 

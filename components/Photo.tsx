@@ -14,6 +14,7 @@ export default function Photo({
   sizes = "100vw",
   priority = false,
   zoom = true,
+  position = "center",
 }: {
   src: string;
   alt: string;
@@ -23,6 +24,11 @@ export default function Photo({
   priority?: boolean;
   /** hover 확대 효과 사용 여부 */
   zoom?: boolean;
+  /**
+   * 크롭 기준점 (CSS object-position).
+   * 세로 사진을 가로 영역에 넣을 때 "center 30%" 처럼 조절하세요.
+   */
+  position?: string;
 }) {
   return (
     <div className={`relative overflow-hidden bg-warm-200 ${className}`}>
@@ -33,6 +39,7 @@ export default function Photo({
         sizes={sizes}
         priority={priority}
         loading={priority ? undefined : "lazy"}
+        style={{ objectPosition: position }}
         className={`object-cover ${
           zoom
             ? "transition-[scale] duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"

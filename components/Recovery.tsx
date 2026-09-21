@@ -10,6 +10,8 @@ const cards: {
   title: string;
   desc: string;
   src: string;
+  /** 크롭 기준점 */
+  position: string;
   /** 지그재그 배치 */
   reverse: boolean;
 }[] = [
@@ -18,6 +20,8 @@ const cards: {
     title: "스트레칭 공간",
     desc: "운동 전후, 몸을 편안하게",
     src: images.stretching,
+    /* 시설 섹션의 스트레칭존과 같은 공간이라 아래쪽(매트) 위주로 크롭 */
+    position: "center 78%",
     reverse: false,
   },
   {
@@ -25,6 +29,7 @@ const cards: {
     title: "회복 공간",
     desc: "프리미엄 안마의자로 더 깊은 휴식",
     src: images.recovery,
+    position: "center 62%",
     reverse: true,
   },
 ];
@@ -51,6 +56,7 @@ export default function Recovery() {
                   src={card.src}
                   alt={`어반짐 ${card.title}`}
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  position={card.position}
                   className="h-[260px] w-full sm:h-[340px] lg:h-[420px]"
                 />
 

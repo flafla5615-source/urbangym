@@ -72,12 +72,17 @@ export const images = {
   stretchingZone: "/images/urbangym/05.jpg",
   /** 06 · 넓은 전경 — 운영 철학 섹션 */
   philosophy: "/images/urbangym/06.jpg",
-  /** 07 · 스트레칭 공간 — 회복 섹션 */
+  /**
+   * 07 · 스트레칭 공간 — 회복 섹션
+   * 현재 05.jpg 와 동일한 사진입니다(스트레칭 공간 사진이 1장뿐).
+   * 크롭 기준점을 달리해 다르게 보이도록 처리했습니다.
+   * 추가 사진이 생기면 이 파일만 교체하세요.
+   */
   stretching: "/images/urbangym/07.jpg",
   /** 08 · 안마의자 · 회복 공간 */
   recovery: "/images/urbangym/08.jpg",
   /** 09 · 하단 CTA 배경 */
   cta: "/images/urbangym/09.jpg",
-  /** 10 · 디테일 컷 — 소개 섹션 보조 이미지 */
+  /** 10 · 프론트 데스크(각도) — 소개 섹션 보조 이미지 */
   detail: "/images/urbangym/10.jpg",
 } as const;

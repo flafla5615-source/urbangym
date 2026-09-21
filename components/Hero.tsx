@@ -52,7 +52,7 @@ export default function Hero() {
                 </span>
                 <span className="h-px flex-1 bg-warm-200" />
                 <span className="font-display text-[11px] uppercase tracking-[0.28em] text-warm-400">
-                  Since 2026
+                  Managed Fitness
                 </span>
               </div>
             </Reveal>
@@ -66,6 +66,7 @@ export default function Hero() {
             alt="어반짐 프론트 데스크 전경"
             priority
             zoom={false}
+            position="center 32%"
             sizes="(max-width: 1024px) 100vw, 55vw"
             className="h-[52vh] min-h-[340px] w-full sm:h-[62vh] lg:h-full lg:min-h-[100dvh]"
           />

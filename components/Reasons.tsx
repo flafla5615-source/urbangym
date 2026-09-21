@@ -78,7 +78,8 @@ export default function Reasons() {
             <div className="group h-full">
               <Photo
                 src={images.detail}
-                alt="어반짐 내부 디테일"
+                alt="어반짐 프론트 데스크와 라운지"
+                position="center 38%"
                 sizes="(max-width: 1024px) 100vw, 32vw"
                 className="h-[280px] w-full rounded-lg sm:h-[360px] lg:h-full lg:min-h-[480px]"
               />

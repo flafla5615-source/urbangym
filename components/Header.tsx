@@ -27,10 +27,8 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500 ${
-        scrolled || open
-          ? "border-b border-warm-200 bg-warm-50/90 backdrop-blur-md"
-          : "border-b border-transparent bg-transparent"
+      className={`fixed inset-x-0 top-0 z-50 bg-warm-50/90 backdrop-blur-md transition-[border-color] duration-500 ${
+        scrolled || open ? "border-b border-warm-200" : "border-b border-transparent"
       }`}
     >
       <Container>

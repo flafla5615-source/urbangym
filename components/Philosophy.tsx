@@ -5,7 +5,8 @@ import { images } from "@/lib/site";
 
 export default function Philosophy() {
   return (
-    <section className="bg-ink py-24 md:py-32 lg:py-40">
+    /* 위쪽 여백 없이 사진이 바로 붙도록 — 밝은 섹션과의 대비를 살립니다 */
+    <section className="bg-ink pb-24 md:pb-32 lg:pb-40">
       {/* 풀블리드 와이드 이미지 */}
       <Reveal>
         <div className="group">
@@ -14,6 +15,7 @@ export default function Philosophy() {
             alt="어반짐 전체 공간 전경"
             sizes="100vw"
             zoom={false}
+            position="center 62%"
             className="h-[46vh] min-h-[300px] w-full sm:h-[58vh] lg:h-[68vh]"
           />
         </div>

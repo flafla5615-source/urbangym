@@ -9,20 +9,20 @@ export default function FinalCta() {
   return (
     <section id="contact" className="relative isolate overflow-hidden bg-ink">
       {/* 배경 이미지 + 어두운 오버레이 */}
-      <Photo
-        src={images.cta}
-        alt=""
-        sizes="100vw"
-        zoom={false}
-        className="absolute inset-0 -z-10 h-full w-full"
-      />
+      <div aria-hidden="true" className="absolute inset-0 -z-10">
+        <Photo
+          src={images.cta}
+          alt=""
+          sizes="100vw"
+          zoom={false}
+          position="center 58%"
+          className="h-full w-full"
+        />
+      </div>
+      {/* 텍스트 가독성은 확보하되 공간감은 남도록 한 겹만 덮습니다 */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-ink/80 mix-blend-multiply"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-gradient-to-br from-ink/85 via-ink/70 to-ink/90"
+        className="absolute inset-0 -z-10 bg-gradient-to-br from-ink/94 via-ink/80 to-ink/94"
       />
 
       <Container className="py-28 md:py-36 lg:py-44">
