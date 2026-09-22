@@ -4,7 +4,19 @@ import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { images } from "@/lib/site";
 
-const zones = [
+const zones: {
+  name: string;
+  desc: string;
+  src: string;
+  /** 그리드 span */
+  span: string;
+  height: string;
+  sizes: string;
+  /** 크롭 기준점 */
+  position: string;
+  /** 전체 폭으로 크게 보여줄 카드 */
+  feature?: boolean;
+}[] = [
   {
     name: "머신존",
     desc: "다양한 머신으로 체계적인 운동",
@@ -43,6 +55,17 @@ const zones = [
     sizes: "(max-width: 1024px) 100vw, 58vw",
     position: "center 52%",
   },
+  {
+    /* 릴랙스존은 전체 폭으로 크게 — 시선이 머물도록 */
+    name: "프리미엄 릴랙스존",
+    desc: "운동 후의 시간까지 생각한 어반짐의 회복 공간",
+    src: images.relax,
+    span: "lg:col-span-12",
+    height: "h-[320px] sm:h-[440px] lg:h-[560px]",
+    sizes: "100vw",
+    position: "center 62%",
+    feature: true,
+  },
 ];
 
 export default function Facilities() {
@@ -77,11 +100,27 @@ export default function Facilities() {
                   className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/75 via-ink/15 to-transparent"
                 />
 
-                <div className="absolute inset-x-0 bottom-0 p-7 lg:p-9">
-                  <h3 className="text-[21px] font-semibold tracking-[-0.01em] text-warm-50 lg:text-[23px]">
+                <div
+                  className={`absolute inset-x-0 bottom-0 p-7 ${
+                    zone.feature ? "lg:p-12" : "lg:p-9"
+                  }`}
+                >
+                  <h3
+                    className={`font-semibold tracking-[-0.015em] text-warm-50 ${
+                      zone.feature
+                        ? "text-[23px] lg:text-[30px]"
+                        : "text-[21px] lg:text-[23px]"
+                    }`}
+                  >
                     {zone.name}
                   </h3>
-                  <p className="mt-2 max-w-[28ch] text-[14.5px] leading-[1.75] text-warm-200 lg:text-[15px]">
+                  <p
+                    className={`mt-2 max-w-[36ch] leading-[1.75] text-warm-200 ${
+                      zone.feature
+                        ? "text-[15px] lg:text-[16.5px]"
+                        : "max-w-[28ch] text-[14.5px] lg:text-[15px]"
+                    }`}
+                  >
                     {zone.desc}
                   </p>
                   <span className="mt-5 block h-px w-10 origin-left bg-warm-50/70 transition-[scale] duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-[2.6]" />

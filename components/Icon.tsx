@@ -13,6 +13,7 @@ export type IconName =
   | "clean"
   | "staff"
   | "managed"
+  | "wellness"
   | "beginner"
   | "hygiene"
   | "layout"
@@ -57,6 +58,14 @@ const paths: Record<IconName, React.ReactNode> = {
       <path d="M9 4.8H7.2A1.7 1.7 0 0 0 5.5 6.5v12.3a1.7 1.7 0 0 0 1.7 1.7h9.6a1.7 1.7 0 0 0 1.7-1.7V6.5a1.7 1.7 0 0 0-1.7-1.7H15" />
       <path d="M9.6 3.2h4.8a.8.8 0 0 1 .8.8v1.8a.8.8 0 0 1-.8.8H9.6a.8.8 0 0 1-.8-.8V4a.8.8 0 0 1 .8-.8Z" />
       <path d="m9.3 13.4 2.1 2.1 4-4.2" />
+    </>
+  ),
+
+  /* 프리미엄 웰니스 — 잎사귀 */
+  wellness: (
+    <>
+      <path d="M20.3 4.2c0 8.9-4.5 13.4-9.8 13.4A5.5 5.5 0 0 1 5 12.1C5 7.3 10.3 4.2 20.3 4.2Z" />
+      <path d="M4 20.3c1.9-4.9 5-8.1 9.1-10.2" />
     </>
   ),
 

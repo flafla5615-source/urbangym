@@ -10,30 +10,36 @@ const reasons: {
   icon: IconName;
   title: string;
   desc: string;
+  /** 카드 하단에 시간 정보를 덧붙일 때만 사용 */
+  hours?: { label: string; value: string }[];
 }[] = [
   {
     no: "01",
     icon: "trainer",
-    title: "전문트레이너",
-    desc: "운동 목적에 맞는 안내와 관리",
+    title: "분야별 대표 트레이너",
+    desc: "각 분야별 전문성을 갖춘 트레이너의 수업과 세심한 관리",
   },
   {
     no: "02",
     icon: "clean",
-    title: "청결한 시설",
-    desc: "쾌적하고 깔끔하게 유지되는 공간",
+    title: "청결하고 건강한 센터",
+    desc: "공기 청정부터 공간의 향까지, 세심하게 관리되는 운동 환경",
   },
   {
     no: "03",
     icon: "staff",
-    title: "친절한 직원",
-    desc: "처음 방문해도 편안한 응대",
+    title: "응대 전문 FC 상주",
+    desc: "운동부터 시설 이용까지 편하게 안내받는 전문 직원 상주",
+    hours: [
+      { label: "평일", value: "09:00 – 21:30" },
+      { label: "주말", value: "12:00 – 17:00" },
+    ],
   },
   {
     no: "04",
-    icon: "managed",
-    title: "관리형 헬스장",
-    desc: "혼자 두지 않는 체계적인 운영",
+    icon: "wellness",
+    title: "프리미엄 웰니스 센터",
+    desc: "소도구부터 머신까지 프리미엄으로, 운동과 휴식을 한 공간에서",
   },
 ];
 
@@ -44,10 +50,10 @@ export default function Reasons() {
         <SectionHeading
           eyebrow="Why Urban Gym"
           title="어반짐이 다른 이유"
-          aside={["좋은 시설은 기본,", "결국 중요한 건 관리입니다."]}
+          aside={["운동을 위한 전문성부터", "머무는 시간의 쾌적함까지."]}
         />
 
-        {/* 카드 4개 + 보조 이미지 */}
+        {/* 카드 4개 + 운동 공간 전경 */}
         <div className="mt-16 grid gap-5 lg:mt-20 lg:grid-cols-12">
           <div className="grid gap-5 sm:grid-cols-2 lg:col-span-8">
             {reasons.map((item, i) => (
@@ -68,18 +74,38 @@ export default function Reasons() {
                   <p className="mt-3 text-[15px] leading-[1.8] text-warm-600">
                     {item.desc}
                   </p>
+
+                  {item.hours && (
+                    <div className="mt-auto border-t border-warm-200 pt-5">
+                      <p className="font-display text-[10px] uppercase tracking-[0.22em] text-warm-400">
+                        FC 상주 시간
+                      </p>
+                      <dl className="mt-3 space-y-1.5">
+                        {item.hours.map((h) => (
+                          <div key={h.label} className="flex items-baseline gap-4">
+                            <dt className="w-8 shrink-0 text-[13px] text-warm-500">
+                              {h.label}
+                            </dt>
+                            <dd className="font-display text-[14px] tracking-[0.02em] text-ink">
+                              {h.value}
+                            </dd>
+                          </div>
+                        ))}
+                      </dl>
+                    </div>
+                  )}
                 </article>
               </Reveal>
             ))}
           </div>
 
-          {/* 우측 세로 이미지 */}
+          {/* 우측 : 운동 공간 전경 */}
           <Reveal delay={160} className="lg:col-span-4">
             <div className="group h-full">
               <Photo
-                src={images.detail}
-                alt="어반짐 프론트 데스크와 라운지"
-                position="center 38%"
+                src={images.gymFloor}
+                alt="어반짐 운동 공간 전경"
+                position="center 55%"
                 sizes="(max-width: 1024px) 100vw, 32vw"
                 className="h-[280px] w-full rounded-lg sm:h-[360px] lg:h-full lg:min-h-[480px]"
               />

@@ -83,6 +83,8 @@ export const images = {
   recovery: "/images/urbangym/08.jpg",
   /** 09 · 하단 CTA 배경 */
   cta: "/images/urbangym/09.jpg",
-  /** 10 · 프론트 데스크(각도) — 소개 섹션 보조 이미지 */
-  detail: "/images/urbangym/10.jpg",
+  /** 10 · 넓은 운동 공간 전경 — 소개 섹션 우측 이미지 */
+  gymFloor: "/images/urbangym/10.jpg",
+  /** 11 · 프리미엄 릴랙스존 — 시설 섹션 와이드 카드 */
+  relax: "/images/urbangym/11.webp",
 } as const;
