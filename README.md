@@ -24,7 +24,7 @@ components/
   Facilities.tsx      시설 소개 (머신/유산소/프리웨이트/스트레칭)
   Programs.tsx        헬스·PT 안내
   Location.tsx        오시는 길
-  MobileContactBar.tsx 모바일 고정 전화·지도 버튼
+  MobileContactBar.tsx 모바일 고정 네이버 예약·전화 버튼
   Philosophy.tsx      운영 철학
   Recovery.tsx        회복 · 편의 공간
   FinalCta.tsx        하단 CTA
@@ -40,6 +40,7 @@ lib/
   site.ts             상호·연락처·주소·운영시간·이미지 경로·메뉴
 public/images/urbangym/
   01.jpg ~ 10.jpg     실제 사진 (README 참고)
+  kakao-share-v1.png  카카오톡 등 링크 미리보기용 공유 이미지
 ```
 
 ## 운영 정보 수정
@@ -50,6 +51,7 @@ public/images/urbangym/
 |---|---|---|
 | `url` | `https://urbangym-eight.vercel.app` | 새 배포 도메인 확정 시 변경 |
 | `contactUrl` / `phoneUrl` | `tel:01022627768` | 전화 상담 |
+| `bookingUrl` | 네이버 예약 `580202` | 사용자가 제공한 예약 URL |
 | `mapUrl` | 네이버 지도 업체명 검색 | 공식 플레이스 URL 확인 후 교체 가능 |
 | `contact.phone` | 010-2262-7768 | |
 | `contact.address` | 경남 진주시 순환로 541 | |
@@ -60,6 +62,7 @@ public/images/urbangym/
 그 외:
 
 - 실제 시설 사진 → `public/images/urbangym/` (배치 가이드는 해당 폴더 README 참고)
+- 카카오톡 공유 썸네일 → `public/images/urbangym/kakao-share-v1.png`, 크기·대체 텍스트는 `lib/site.ts`의 `shareImage`
 - 로고 확정 시 `components/Logo.tsx` 의 `<svg>` 교체
 - 헤더 `헬스 · PT` 메뉴는 프로그램 섹션으로 연결됩니다.
 - 가격·프로모션·주차 조건은 매장 확인 후 추가하세요.

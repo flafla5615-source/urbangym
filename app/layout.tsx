@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import { images, site } from "@/lib/site";
+import { shareImage, site } from "@/lib/site";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     siteName: "어반짐 평거점",
     url: "/",
-    images: [{ url: images.philosophy, alt: "어반짐 평거점 시설 전경" }],
+    images: [shareImage],
   },
-  twitter: { card: "summary_large_image", images: [images.philosophy] },
+  twitter: { card: "summary_large_image", images: [shareImage] },
 };
 
 export const viewport: Viewport = {
