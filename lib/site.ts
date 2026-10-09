@@ -12,6 +12,8 @@ export const site = {
   },
   contactUrl: "tel:01022627768",
   phoneUrl: "tel:01022627768",
+  bookingUrl:
+    "https://m.booking.naver.com/booking/13/bizes/580202?theme=place&entry=pll&lang=ko",
   mapUrl:
     "https://map.naver.com/p/search/%EC%96%B4%EB%B0%98%EC%A7%90%20%ED%8F%89%EA%B1%B0%EC%A0%90",
   instagramUrl: "https://www.instagram.com/urban_gym001/",
@@ -28,6 +30,15 @@ export const site = {
     { label: "헬스 · PT", href: "#program" },
     { label: "오시는 길", href: "#location" },
   ],
+} as const;
+
+/** 카카오톡 등 링크 미리보기용 전용 이미지. 실제 파일 크기와 2:1 비율을 명시합니다. */
+export const shareImage = {
+  url: "/images/urbangym/kakao-share-v1.png",
+  width: 1774,
+  height: 887,
+  type: "image/png",
+  alt: "어반짐 평거점 · 24시간 헬스 · PT · 진주 평거동",
 } as const;
 
 /** 기존 사이트의 실제 매장 이미지 경로 유지. 이미지 파일 자체는 교체하지 않습니다. */

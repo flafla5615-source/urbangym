@@ -25,6 +25,7 @@ export type IconName =
   | "close"
   | "pin"
   | "clock"
+  | "calendar"
   | "phone";
 
 const paths: Record<IconName, React.ReactNode> = {
@@ -135,6 +136,12 @@ const paths: Record<IconName, React.ReactNode> = {
     <>
       <circle cx="12" cy="12" r="8.4" />
       <path d="M12 7.6V12l2.9 1.8" />
+    </>
+  ),
+  calendar: (
+    <>
+      <rect x="4" y="5.5" width="16" height="15" rx="2" />
+      <path d="M8 3.5v4M16 3.5v4M4 10h16m-11.5 5 2 2 4-4" />
     </>
   ),
   phone: (
