@@ -1,4 +1,4 @@
-# 어반짐 URBAN GYM — 랜딩페이지
+# 어반짐 평거점 — 홈페이지
 
 Next.js(App Router) + Tailwind CSS 기반 반응형 단일 페이지 랜딩페이지입니다.
 
@@ -22,7 +22,9 @@ components/
   Hero.tsx            히어로
   Reasons.tsx         어반짐이 다른 이유
   Facilities.tsx      시설 소개 (머신/유산소/프리웨이트/스트레칭)
-  Audience.tsx        추천 대상
+  Programs.tsx        헬스·PT 안내
+  Location.tsx        오시는 길
+  MobileContactBar.tsx 모바일 고정 전화·지도 버튼
   Philosophy.tsx      운영 철학
   Recovery.tsx        회복 · 편의 공간
   FinalCta.tsx        하단 CTA
@@ -35,32 +37,33 @@ components/
   Icon.tsx            라인 아이콘 세트
   Reveal.tsx          스크롤 등장 효과
 lib/
-  site.ts             ★ 모든 텍스트 placeholder · 이미지 경로 · 메뉴
+  site.ts             상호·연락처·주소·운영시간·이미지 경로·메뉴
 public/images/urbangym/
   01.jpg ~ 10.jpg     실제 사진 (README 참고)
 ```
 
-## 수정이 필요한 곳 (TODO)
+## 운영 정보 수정
 
 전부 `lib/site.ts` 한 파일에 모여 있습니다.
 
 | 항목 | 현재 값 | 비고 |
 |---|---|---|
-| `contactUrl` | `#contact` | 카카오톡 채널 / 전화 링크로 교체 |
-| `mapUrl` | `#location` | 네이버지도 · 카카오맵 길찾기 링크 |
-| `contact.phone` | 추후 입력 예정 | |
-| `contact.address` | 추후 입력 예정 | |
-| `contact.addressDetail` | 추후 입력 예정 | 층수 · 건물명 등 |
-| `contact.parking` | 추후 입력 예정 | |
-| `hours[].value` | 추후 입력 예정 | 평일 / 토 / 일·공휴일 |
+| `url` | `https://urbangym-eight.vercel.app` | 새 배포 도메인 확정 시 변경 |
+| `contactUrl` / `phoneUrl` | `tel:01022627768` | 전화 상담 |
+| `mapUrl` | 네이버 지도 업체명 검색 | 공식 플레이스 URL 확인 후 교체 가능 |
+| `contact.phone` | 010-2262-7768 | |
+| `contact.address` | 경남 진주시 순환로 541 | |
+| `contact.addressDetail` | 지원빌딩 6·7층 (평거동) | |
+| `contact.parking` | 전화 문의 | 주차 지원 조건 확인 필요 |
+| `hours[].value` | 24시간 · 연중무휴 | 상담 직원 운영시간과 구분 |
 
 그 외:
 
-- 사진 10장 → `public/images/urbangym/` (배치 가이드는 해당 폴더 README 참고)
+- 실제 시설 사진 → `public/images/urbangym/` (배치 가이드는 해당 폴더 README 참고)
 - 로고 확정 시 `components/Logo.tsx` 의 `<svg>` 교체
-- 헤더 `프로그램` 메뉴는 현재 「추천 대상」 섹션으로 연결됩니다.
-  실제 프로그램(PT·회원권 등) 정보가 확정되면 별도 섹션 추가 필요
-- 도메인 확정 시 `app/layout.tsx` 의 `metadataBase` 주석 해제
+- 헤더 `헬스 · PT` 메뉴는 프로그램 섹션으로 연결됩니다.
+- 가격·프로모션·주차 조건은 매장 확인 후 추가하세요.
+- 2026-10-09 리뉴얼 정보 확인과 검증 기록: `docs/renewal-review.md`
 
 ## 디자인 토큰
 
@@ -70,5 +73,5 @@ public/images/urbangym/
 - 배경: `warm-50` / `warm-100`
 - 텍스트: `ink` / `warm-600`
 - 다크 섹션: `ink` / `charcoal-soft`
-- 액센트: `accent` (웜 브론즈, 아주 절제해서 사용)
+- 액센트: `accent` (세이지)
 - 폰트: Pretendard(한글) + Outfit(영문 디스플레이)

@@ -1,3 +1,5 @@
+import { site } from "@/lib/site";
+
 /**
  * 임시 로고
  * ------------------------------------------------------------
@@ -44,7 +46,7 @@ export default function Logo({
       {showText && (
         <span className="flex flex-col leading-none">
           <span className={`text-[15px] font-semibold tracking-tight ${textColor}`}>
-            어반짐
+            {site.brand.ko}
           </span>
           <span
             className={`font-display mt-1 text-[9.5px] font-medium uppercase tracking-[0.3em] ${subColor}`}

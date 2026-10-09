@@ -8,60 +8,32 @@ import { images, site } from "@/lib/site";
 export default function FinalCta() {
   return (
     <section id="contact" className="relative isolate overflow-hidden bg-ink">
-      {/* 배경 이미지 + 어두운 오버레이 */}
       <div aria-hidden="true" className="absolute inset-0 -z-10">
-        <Photo
-          src={images.cta}
-          alt=""
-          sizes="100vw"
-          zoom={false}
-          position="center 58%"
-          className="h-full w-full"
-        />
+        <Photo src={images.cta} alt="" sizes="100vw" zoom={false} position="center 58%" className="h-full w-full" />
       </div>
-      {/* 텍스트 가독성은 확보하되 공간감은 남도록 한 겹만 덮습니다 */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-gradient-to-br from-ink/94 via-ink/80 to-ink/94"
-      />
-
-      <Container className="py-28 md:py-36 lg:py-44">
-        <Reveal>
-          <Logo tone="light" showText={false} />
-        </Reveal>
-
-        <div className="mt-10 grid gap-12 lg:grid-cols-12 lg:items-end lg:gap-16">
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-br from-ink/95 via-ink/85 to-ink/95" />
+      <Container className="py-24 md:py-36 lg:py-40">
+        <Reveal><Logo tone="light" showText={false} /></Reveal>
+        <div className="mt-9 grid gap-12 lg:grid-cols-12 lg:items-end lg:gap-16">
           <div className="lg:col-span-8">
             <Reveal delay={80}>
-              <p className="font-display text-[11px] uppercase tracking-[0.3em] text-accent-soft">
-                Start Today
-              </p>
-              <h2 className="mt-6 text-[30px] font-semibold leading-[1.3] tracking-[-0.02em] text-warm-50 sm:text-[38px] lg:text-[48px]">
-                어반짐에서 더 편한 운동을 시작해보세요
+              <p className="eyebrow text-accent-soft">Start Your Routine</p>
+              <h2 className="mt-6 text-balance text-[32px] font-semibold leading-[1.28] tracking-[-0.035em] text-warm-50 sm:text-[42px] lg:text-[53px]">
+                나에게 맞는 운동을,<br />오늘 어반짐에서 시작하세요.
               </h2>
+              <p className="mt-6 text-[16px] leading-[1.85] text-warm-300">진주 평거동 · 24시간 연중무휴 · 헬스 &amp; PT</p>
             </Reveal>
-
             <Reveal delay={170}>
-              <div className="mt-10">
-                <Button href={site.contactUrl} variant="light">
-                  지금 상담하기
-                </Button>
+              <div className="mt-9 flex flex-wrap gap-3">
+                <Button href={site.phoneUrl} variant="light">전화로 상담하기</Button>
+                <a href={site.mapUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full border border-white/30 px-7 py-3.5 text-[15px] font-medium text-white transition-colors hover:bg-white/10">오시는 길</a>
               </div>
             </Reveal>
           </div>
-
           <Reveal delay={240} className="lg:col-span-4">
             <div className="border-t border-warm-50/20 pt-8 lg:text-right">
-              <p className="text-[16px] leading-[1.9] text-warm-200">
-                <span className="block">건강한 오늘이</span>
-                <span className="block">더 나은 내일을 만듭니다.</span>
-              </p>
-              <p className="mt-6 text-[14px] font-medium text-warm-50">
-                {site.brand.ko}{" "}
-                <span className="font-display ml-1 text-[12px] uppercase tracking-[0.22em] text-warm-400">
-                  {site.brand.en}
-                </span>
-              </p>
+              <p className="text-[16px] leading-[1.9] text-warm-200">당신의 하루에 맞춘<br />운동의 새로운 기준.</p>
+              <p className="mt-6 font-display text-[12px] uppercase tracking-[0.22em] text-warm-300">URBAN GYM PYEONGGEO</p>
             </div>
           </Reveal>
         </div>

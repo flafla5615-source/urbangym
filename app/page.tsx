@@ -1,36 +1,56 @@
-import Audience from "@/components/Audience";
 import Facilities from "@/components/Facilities";
 import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Location from "@/components/Location";
+import MobileContactBar from "@/components/MobileContactBar";
 import Philosophy from "@/components/Philosophy";
+import Programs from "@/components/Programs";
 import Reasons from "@/components/Reasons";
 import Recovery from "@/components/Recovery";
+import { site } from "@/lib/site";
+
+const businessData = {
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  name: site.brand.ko,
+  url: site.url,
+  telephone: site.contact.phone,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: `${site.contact.address} ${site.contact.addressDetail}`,
+    addressLocality: "진주시",
+    addressRegion: "경상남도",
+    addressCountry: "KR",
+  },
+  openingHoursSpecification: [{
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    opens: "00:00",
+    closes: "23:59",
+  }],
+  sameAs: [site.instagramUrl],
+};
 
 export default function Home() {
   return (
     <>
+      <a href="#main-content" className="skip-link">본문 바로가기</a>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(businessData).replace(/</g, "\\u003c") }} />
       <Header />
-
-      <main>
-        {/* 1. 히어로 */}
+      <main id="main-content" tabIndex={-1}>
         <Hero />
-        {/* 2. 어반짐이 다른 이유 */}
         <Reasons />
-        {/* 3. 시설 소개 */}
         <Facilities />
-        {/* 4. 추천 대상 */}
-        <Audience />
-        {/* 5. 운영 철학 */}
-        <Philosophy />
-        {/* 6. 회복 · 편의 공간 */}
+        <Programs />
         <Recovery />
-        {/* 7. 하단 CTA */}
+        <Philosophy />
+        <Location />
         <FinalCta />
       </main>
-
       <Footer />
+      <MobileContactBar />
     </>
   );
 }
