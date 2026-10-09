@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 /**
  * 스크롤 진입 시 은은하게 나타나는 래퍼.
@@ -18,21 +18,22 @@ export default function Reveal({
   className?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const [shown, setShown] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setShown(true);
-      return;
-    }
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !window.IntersectionObserver || !el.animate) return;
+
+    let animation: Animation | undefined;
 
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          setShown(true);
+          animation = el.animate(
+            [{ opacity: 0, transform: "translateY(20px)" }, { opacity: 1, transform: "translateY(0)" }],
+            { duration: 700, delay, easing: "cubic-bezier(0.16,1,0.3,1)", fill: "backwards" },
+          );
           observer.disconnect();
         }
       },
@@ -40,16 +41,13 @@ export default function Reveal({
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
+    return () => { observer.disconnect(); animation?.cancel(); };
+  }, [delay]);
 
   return (
     <div
       ref={ref}
-      style={{ transitionDelay: `${delay}ms` }}
-      className={`transition-[opacity,translate] duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
-        shown ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-      } ${className}`}
+      className={className}
     >
       {children}
     </div>

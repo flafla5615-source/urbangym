@@ -1,70 +1,63 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── 폰트 ───────────────────────────────── */
   --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
     system-ui, "Apple SD Gothic Neo", sans-serif;
   --font-display: var(--font-outfit), "Pretendard Variable", Pretendard, sans-serif;
 
-  /* ── 브랜드 컬러 ─────────────────────────── */
-  /* 차콜 계열 (텍스트 · 다크 섹션) */
-  --color-ink: #1a1917;
-  --color-charcoal: #2b2926;
-  --color-charcoal-soft: #3d3a35;
-
-  /* 웜그레이 계열 (배경 · 보더 · 보조 텍스트) */
-  --color-warm-50: #faf9f7;
-  --color-warm-100: #f4f2ee;
-  --color-warm-200: #e9e6e0;
-  --color-warm-300: #d8d3c9;
-  --color-warm-400: #b5afa3;
-  --color-warm-500: #8b8478;
-  --color-warm-600: #6b655b;
-
-  /* 액센트 (아주 절제해서 사용) */
-  --color-accent: #8f7c62;
-  --color-accent-soft: #b3a189;
+  --color-ink: #191b19;
+  --color-charcoal: #262b27;
+  --color-charcoal-soft: #39423c;
+  --color-warm-50: #f8f7f4;
+  --color-warm-100: #f0efea;
+  --color-warm-200: #e4e2db;
+  --color-warm-300: #d4d1c8;
+  --color-warm-400: #a7a59c;
+  --color-warm-500: #6b7066;
+  --color-warm-600: #595e57;
+  --color-accent: #536a5a;
+  --color-accent-soft: #a9c2ad;
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-    /* sticky 헤더 높이만큼 앵커 위치 보정 */
-    scroll-padding-top: 5.5rem;
+  html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+  body { word-break: keep-all; overflow-wrap: break-word; }
+  ::selection { background-color: var(--color-ink); color: var(--color-warm-50); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 4px; }
+  [hidden] { display: none !important; }
+  .skip-link {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 100;
+    transform: translateY(-200%);
+    border-radius: .5rem;
+    background: var(--color-ink);
+    padding: .75rem 1rem;
+    color: white;
   }
-
-  body {
-    /* 한글 줄바꿈: 단어 단위로 끊어 읽기 좋게 */
-    word-break: keep-all;
-    overflow-wrap: break-word;
-  }
-
-  ::selection {
-    background-color: var(--color-ink);
-    color: var(--color-warm-50);
-  }
+  .skip-link:focus { transform: translateY(0); }
 }
 
 @layer utilities {
-  /* 섹션 상단의 작은 영문 라벨 */
   .eyebrow {
     font-family: var(--font-display);
     font-size: 0.6875rem;
-    letter-spacing: 0.28em;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
     font-weight: 500;
   }
+  .text-balance { text-wrap: balance; }
+  .section-kicker { letter-spacing: .22em; text-transform: uppercase; font-family: var(--font-display); }
 }
 
-/* 모션 최소화를 선호하는 사용자 존중 */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+@media (max-width: 1023px) {
+  body { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
+}
 
-  *,
-  *::before,
-  *::after {
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }

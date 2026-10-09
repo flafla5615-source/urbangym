@@ -6,70 +6,70 @@ import { images, site } from "@/lib/site";
 
 export default function Hero() {
   return (
-    <section id="top" className="relative bg-warm-50 pt-[76px] lg:pt-0">
-      <div className="grid items-stretch lg:min-h-[100dvh] lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)]">
-        {/* ── 좌측 : 카피 ─────────────────────── */}
-        <div className="order-2 flex items-center py-16 md:py-24 lg:order-1 lg:py-0">
+    <section id="top" className="relative isolate overflow-hidden bg-warm-50 pt-[76px] lg:pt-[84px]">
+      <div className="grid lg:min-h-[calc(100dvh-84px)] lg:grid-cols-[minmax(0,1fr)_minmax(0,1.04fr)]">
+        <div className="order-1 flex items-center py-10 sm:py-16 lg:py-16">
           <Container className="lg:ml-auto lg:mr-0 lg:max-w-[680px] lg:pr-16">
             <Reveal>
-              <p className="eyebrow text-accent">A Healthier You at Urban Gym</p>
-            </Reveal>
-
-            <Reveal delay={90}>
-              <h1 className="mt-7 text-[32px] font-semibold leading-[1.3] tracking-[-0.025em] text-ink sm:text-[42px] lg:text-[52px] lg:leading-[1.24]">
-                <span className="block text-warm-500">
-                  시설만 좋은 헬스장은 많습니다
-                </span>
-                <span className="mt-2 block">
-                  어반짐은 관리가 다른 헬스장입니다
-                </span>
-              </h1>
-            </Reveal>
-
-            <Reveal delay={170}>
-              <p className="mt-8 text-[15px] leading-[1.9] text-warm-600 sm:text-[16px]">
-                전문트레이너 · 청결한 시설 · 친절한 직원 · 관리형 헬스장
-              </p>
-              <p className="mt-3 text-[15px] leading-[1.9] text-warm-500 sm:text-[16px]">
-                운동이 더 나은 일상이 되는 곳
-              </p>
-            </Reveal>
-
-            <Reveal delay={250}>
-              <div className="mt-11 flex flex-wrap items-center gap-3">
-                <Button href={site.contactUrl}>상담 문의</Button>
-                <Button href="#facility" variant="outline" withArrow={false}>
-                  시설 둘러보기
-                </Button>
+              <div className="inline-flex items-center gap-3 rounded-full border border-warm-300/80 bg-white/80 px-4 py-2.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
+                <span className="eyebrow text-accent">JINJU · PYEONGGEO · 24H</span>
               </div>
             </Reveal>
-
-            {/* 하단 브랜드 라인 */}
-            <Reveal delay={330}>
-              <div className="mt-14 flex items-center gap-4 border-t border-warm-200 pt-7">
-                <span className="font-display text-[11px] uppercase tracking-[0.28em] text-warm-400">
-                  Urban Gym
-                </span>
-                <span className="h-px flex-1 bg-warm-200" />
-                <span className="font-display text-[11px] uppercase tracking-[0.28em] text-warm-400">
-                  Managed Fitness
-                </span>
+            <Reveal delay={80}>
+              <h1 className="mt-7 text-balance text-[clamp(2rem,4.3vw,4.5rem)] font-semibold leading-[1.2] tracking-[-0.055em] text-ink sm:mt-9">
+                운동이 일상이 되는 곳,
+                <span className="mt-2 block text-accent">{site.brand.ko}.</span>
+              </h1>
+            </Reveal>
+            <Reveal delay={160}>
+              <p className="mt-6 max-w-[36ch] text-[15px] leading-[1.95] text-warm-600 sm:text-[18px]">
+                나에게 맞는 시간에, 나에게 맞는 방식으로.
+                <br />
+                24시간 열려 있는 평거동의 헬스 &amp; PT 공간.
+              </p>
+            </Reveal>
+            <Reveal delay={240}>
+              <div className="mt-8 flex flex-wrap items-center gap-3 sm:mt-10">
+                <Button href={site.contactUrl}>회원권 · PT 전화 문의</Button>
+                <Button href="#facility" variant="outline" withArrow={false}>시설 둘러보기</Button>
+              </div>
+              <p className="mt-4 text-[12px] text-warm-500">가격 및 진행 중인 혜택은 상담 시 안내드립니다.</p>
+            </Reveal>
+            <Reveal delay={320}>
+              <div className="mt-10 grid max-w-[480px] grid-cols-3 border-t border-warm-300 pt-6 sm:mt-14">
+                {[
+                  ["24H", "365일 운영"],
+                  ["FITNESS", "헬스 · PT"],
+                  ["JINJU", "진주 평거동"],
+                ].map(([value, label]) => (
+                  <div key={value} className="border-r border-warm-200 px-3 first:pl-0 last:border-0">
+                    <p className="font-display text-[15px] font-semibold tracking-[0.02em] text-ink sm:text-[18px]">{value}</p>
+                    <p className="mt-1.5 text-[12px] text-warm-500">{label}</p>
+                  </div>
+                ))}
               </div>
             </Reveal>
           </Container>
         </div>
-
-        {/* ── 우측 : 프론트 데스크 메인 비주얼 ── */}
-        <div className="group order-1 lg:order-2">
+        <div className="group relative order-2 min-h-[340px] lg:min-h-[calc(100dvh-84px)]">
           <Photo
             src={images.hero}
-            alt="어반짐 프론트 데스크 전경"
+            alt="어반짐 평거점 실내 시설"
             priority
             zoom={false}
             position="center 32%"
             sizes="(max-width: 1024px) 100vw, 55vw"
-            className="h-[52vh] min-h-[340px] w-full sm:h-[62vh] lg:h-full lg:min-h-[100dvh]"
+            className="h-[48vh] min-h-[340px] w-full sm:h-[56vh] lg:h-full lg:min-h-[calc(100dvh-84px)]"
           />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink/60 to-transparent" />
+          <div className="absolute bottom-7 left-7 right-7 flex items-end justify-between gap-3 text-white sm:bottom-10 sm:left-10 sm:right-10">
+            <div>
+              <p className="font-display text-[11px] uppercase tracking-[0.26em] text-white/70">Your space, your pace.</p>
+              <p className="mt-2 text-[22px] font-semibold tracking-tight sm:text-[28px]">URBAN GYM</p>
+            </div>
+            <span className="font-display text-[12px] tracking-[0.16em] text-white/85">6F—7F</span>
+          </div>
         </div>
       </div>
     </section>

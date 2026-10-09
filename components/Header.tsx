@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Container from "./Container";
 import Icon from "./Icon";
 import Logo from "./Logo";
@@ -9,6 +9,7 @@ import { site } from "@/lib/site";
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -19,9 +20,23 @@ export default function Header() {
 
   /* 모바일 메뉴가 열려 있을 때 배경 스크롤 잠금 */
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        toggleRef.current?.focus();
+      }
+    };
+    const desktop = window.matchMedia("(min-width: 1024px)");
+    const onDesktop = () => { if (desktop.matches) setOpen(false); };
+    desktop.addEventListener("change", onDesktop);
+    document.addEventListener("keydown", onKeyDown);
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
+      desktop.removeEventListener("change", onDesktop);
+      document.removeEventListener("keydown", onKeyDown);
     };
   }, [open]);
 
@@ -34,7 +49,7 @@ export default function Header() {
       <Container>
         <div className="flex h-[76px] items-center justify-between lg:h-[84px]">
           {/* 좌측 : 로고 */}
-          <a href="#top" className="shrink-0" aria-label="어반짐 홈">
+          <a href="#top" className="shrink-0" aria-label="어반짐 평거점 홈" onClick={() => setOpen(false)}>
             <Logo />
           </a>
 
@@ -65,10 +80,12 @@ export default function Header() {
             </a>
 
             <button
+              ref={toggleRef}
               type="button"
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? "메뉴 닫기" : "메뉴 열기"}
               aria-expanded={open}
+              aria-controls="mobile-menu"
               className="-mr-2 inline-flex h-11 w-11 items-center justify-center rounded-full text-ink transition-colors duration-300 hover:bg-warm-100 lg:hidden"
             >
               <Icon name={open ? "close" : "menu"} className="h-6 w-6" />
@@ -79,9 +96,9 @@ export default function Header() {
 
       {/* 모바일 메뉴 */}
       <div
-        className={`overflow-hidden border-t border-warm-200 bg-warm-50 transition-[max-height,opacity] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden ${
-          open ? "max-h-[420px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        id="mobile-menu"
+        hidden={!open}
+        className="max-h-[calc(100dvh-160px)] overflow-y-auto border-t border-warm-200 bg-warm-50 lg:hidden"
       >
         <Container>
           <nav aria-label="모바일 메뉴">
