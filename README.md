@@ -23,6 +23,7 @@ components/
   Reasons.tsx         어반짐이 다른 이유
   Facilities.tsx      시설 소개 (머신/유산소/프리웨이트/스트레칭)
   Programs.tsx        헬스·PT 안내
+  Trainers.tsx        대표·트레이너 소개 및 펼침 프로필
   Location.tsx        오시는 길
   MobileContactBar.tsx 모바일 고정 네이버 예약·전화 버튼
   Philosophy.tsx      운영 철학
@@ -38,6 +39,9 @@ components/
   Reveal.tsx          스크롤 등장 효과
 lib/
   site.ts             상호·연락처·주소·운영시간·이미지 경로·메뉴
+  trainers.ts         대표·트레이너 사진 경로·슬로건·경력·자격·교육 이력
+public/images/trainers/
+  *.webp             김민후·김성훈·이승구 프로필 사진
 public/images/urbangym/
   01.jpg ~ 10.jpg     실제 사진 (README 참고)
   kakao-share-v1.png  카카오톡 등 링크 미리보기용 공유 이미지
@@ -65,6 +69,7 @@ public/images/urbangym/
 - 카카오톡 공유 썸네일 → `public/images/urbangym/kakao-share-v1.png`, 크기·대체 텍스트는 `lib/site.ts`의 `shareImage`
 - 로고 확정 시 `components/Logo.tsx` 의 `<svg>` 교체
 - 헤더 `헬스 · PT` 메뉴는 프로그램 섹션으로 연결됩니다.
+- 헤더 `트레이너 소개` 메뉴는 `#trainers`로 연결됩니다. 프로필은 `lib/trainers.ts`에서 수정하며, 전체 이력은 JavaScript 없이도 펼칠 수 있습니다.
 - 가격·프로모션·주차 조건은 매장 확인 후 추가하세요.
 - 2026-10-09 리뉴얼 정보 확인과 검증 기록: `docs/renewal-review.md`
 

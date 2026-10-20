@@ -28,6 +28,7 @@ export const site = {
     { label: "어반짐 소개", href: "#about" },
     { label: "시설 둘러보기", href: "#facility" },
     { label: "헬스 · PT", href: "#program" },
+    { label: "트레이너 소개", href: "#trainers" },
     { label: "오시는 길", href: "#location" },
   ],
 } as const;
