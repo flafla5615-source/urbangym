@@ -1,6 +1,7 @@
 import Container from "./Container";
 import Icon from "./Icon";
 import Reveal from "./Reveal";
+import NaverMap from "./NaverMap";
 import { site } from "@/lib/site";
 
 export default function Location() {
@@ -41,16 +42,7 @@ export default function Location() {
               </div>
             </Reveal>
           </div>
-          <div className="relative isolate flex min-h-[340px] flex-col justify-end overflow-hidden bg-[#35443a] p-8 text-white sm:p-12 lg:min-h-[560px] lg:p-16">
-            <div className="pointer-events-none absolute inset-0 -z-10 opacity-30" aria-hidden="true" style={{backgroundImage:"linear-gradient(#e4e9df 1px, transparent 1px), linear-gradient(90deg,#e4e9df 1px,transparent 1px)",backgroundSize:"55px 55px"}} />
-            <div className="pointer-events-none absolute left-1/2 top-[35%] -z-10 h-[330px] w-[330px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/15 sm:h-[400px] sm:w-[400px]" aria-hidden="true" />
-            <div className="pointer-events-none absolute left-1/2 top-[35%] -z-10 h-[210px] w-[210px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/30 sm:h-[260px] sm:w-[260px]" aria-hidden="true" />
-            <span className="absolute left-1/2 top-[35%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-warm-50 p-5 text-accent shadow-[0_20px_80px_rgba(0,0,0,.22)]" aria-hidden="true"><Icon name="pin" className="h-8 w-8" /></span>
-            <p className="font-display text-[11px] uppercase tracking-[0.3em] text-white/60">JINJU · PYEONGGEO-DONG</p>
-            <p className="mt-4 text-[34px] font-semibold tracking-tight sm:text-[45px]">URBAN GYM</p>
-            <p className="mt-2 text-[15px] text-warm-200">{site.contact.addressDetail}</p>
-            <p className="mt-8 border-t border-white/20 pt-5 text-[13px] leading-[1.8] text-warm-200">차량으로 방문하시나요? 주차 이용 방법은 전화로 편하게 문의해 주세요.</p>
-          </div>
+          <NaverMap />
         </div>
       </Container>
     </section>
