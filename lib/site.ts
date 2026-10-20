@@ -16,6 +16,12 @@ export const site = {
     "https://m.booking.naver.com/booking/13/bizes/580202?theme=place&entry=pll&lang=ko",
   mapUrl:
     "https://map.naver.com/p/search/%EC%96%B4%EB%B0%98%EC%A7%90%20%ED%8F%89%EA%B1%B0%EC%A0%90",
+  map: {
+    clientId: "t1g6hcfxha",
+    // NAVER geocoding: 경상남도 진주시 순환로 541 (평거동 902).
+    latitude: 35.1722671,
+    longitude: 128.0604863,
+  },
   instagramUrl: "https://www.instagram.com/urban_gym001/",
   contact: {
     phone: "010-2262-7768",
