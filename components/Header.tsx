@@ -55,7 +55,7 @@ export default function Header() {
 
           {/* 중앙 : 메뉴 (데스크톱) */}
           <nav className="hidden lg:block" aria-label="주요 메뉴">
-            <ul className="flex items-center gap-10">
+            <ul className="flex items-center gap-5 xl:gap-10">
               {site.nav.map((item) => (
                 <li key={item.href}>
                   <a

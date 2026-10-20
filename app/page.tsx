@@ -9,6 +9,7 @@ import Philosophy from "@/components/Philosophy";
 import Programs from "@/components/Programs";
 import Reasons from "@/components/Reasons";
 import Recovery from "@/components/Recovery";
+import Trainers from "@/components/Trainers";
 import { site } from "@/lib/site";
 
 const businessData = {
@@ -44,6 +45,7 @@ export default function Home() {
         <Reasons />
         <Facilities />
         <Programs />
+        <Trainers />
         <Recovery />
         <Philosophy />
         <Location />

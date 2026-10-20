@@ -24,6 +24,7 @@
   body { word-break: keep-all; overflow-wrap: break-word; }
   ::selection { background-color: var(--color-ink); color: var(--color-warm-50); }
   a:focus-visible, button:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 4px; }
+  summary:focus-visible { outline: 3px solid var(--color-accent); outline-offset: -4px; }
   [hidden] { display: none !important; }
   .skip-link {
     position: fixed;
