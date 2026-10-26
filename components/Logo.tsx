@@ -1,20 +1,17 @@
 import { site } from "@/lib/site";
 
-/**
- * 임시 로고
- * ------------------------------------------------------------
- * 원형 테두리 + U 레터마크 조합입니다.
- * TODO: 실제 로고 파일(SVG)이 나오면 아래 <svg> 부분만 교체하면 됩니다.
- */
+/** U의 두 기둥과 중앙 바를 결합한 어반짐 벡터 로고. 단색·역상으로 사용합니다. */
 export default function Logo({
   className = "",
   showText = true,
   tone = "dark",
+  subtitle = site.brand.ko,
 }: {
   className?: string;
   showText?: boolean;
   /** dark : 밝은 배경용 / light : 어두운 배경용 */
   tone?: "dark" | "light";
+  subtitle?: string;
 }) {
   const textColor = tone === "light" ? "text-warm-50" : "text-ink";
   const subColor = tone === "light" ? "text-warm-300" : "text-warm-500";
@@ -22,36 +19,27 @@ export default function Logo({
   return (
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
       <svg
-        viewBox="0 0 40 40"
+        viewBox="0 0 56 56"
         aria-hidden="true"
-        className={`h-9 w-9 shrink-0 ${textColor}`}
+        className={`h-10 w-10 shrink-0 ${textColor}`}
         fill="none"
       >
-        <circle
-          cx="20"
-          cy="20"
-          r="19"
-          stroke="currentColor"
-          strokeWidth="1.2"
-          opacity="0.45"
-        />
         <path
-          d="M13.4 12.6v9.1c0 3.7 2.9 6.5 6.6 6.5s6.6-2.8 6.6-6.5v-9.1"
-          stroke="currentColor"
-          strokeWidth="2.1"
-          strokeLinecap="round"
+          d="M6 5h10v24c0 7 4.5 12 12 12s12-5 12-12V5h10v24c0 13-9 22-22 22S6 42 6 29V5Z"
+          fill="currentColor"
         />
+        <path d="M23 5h10v17H23z" fill="currentColor" />
       </svg>
 
       {showText && (
         <span className="flex flex-col leading-none">
-          <span className={`text-[15px] font-semibold tracking-tight ${textColor}`}>
-            {site.brand.ko}
-          </span>
           <span
-            className={`font-display mt-1 text-[9.5px] font-medium uppercase tracking-[0.3em] ${subColor}`}
+            className={`font-display text-[17px] font-normal uppercase tracking-[0.015em] ${textColor}`}
           >
-            Urban Gym
+            URBAN GYM
+          </span>
+          <span className={`mt-1 text-[11px] font-medium tracking-[-0.01em] ${subColor}`}>
+            {subtitle}
           </span>
         </span>
       )}

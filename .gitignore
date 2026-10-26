@@ -23,3 +23,18 @@ yarn-error.log*
 
 *.tsbuildinfo
 next-env.d.ts
+
+# Local design tooling and review captures; keep durable design sources only.
+/.impeccable/build/
+/.impeccable/questions/
+/.impeccable/review/*.png
+/.impeccable/review/*.jpg
+/.impeccable/review/diff/
+/.impeccable/mocks/worlds/
+/.impeccable/mocks/decision/architecture*
+/.impeccable/mocks/decision/canon*
+/.impeccable/mocks/decision/gallery*
+/.impeccable/direction-options.json
+/.impeccable/direction-candidates.md
+/.impeccable/review/components.json
+/_workspace/

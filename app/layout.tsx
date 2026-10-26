@@ -1,14 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Outfit } from "next/font/google";
 import "./globals.css";
 import { shareImage, site } from "@/lib/site";
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-outfit",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -19,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "어반짐 평거점 | 24시간, 나의 운동 시간",
+    title: "어반짐 평거점 | 24시간 헬스 · PT",
     description: "진주 평거동 순환로 541 · 24시간 연중무휴 · 헬스 & PT",
     type: "website",
     locale: "ko_KR",
@@ -33,21 +25,15 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#f8f7f4",
+  themeColor: "#f6f6f4",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="ko" className={outfit.variable}>
-      <head>
-        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
-        />
-      </head>
+    <html lang="ko">
+      <head><link rel="preload" href="/fonts/BlackHanSans-UI.ttf" as="font" type="font/ttf" crossOrigin="anonymous" /></head>
       <body className="bg-warm-50 font-sans text-ink antialiased">{children}</body>
     </html>
   );

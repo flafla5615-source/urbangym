@@ -1,0 +1,251 @@
+{
+  "regions": [
+    {
+      "id": "consultation-row",
+      "kind": "chrome",
+      "container": true,
+      "pixelBox": {"x": 28, "y": 859, "w": 798, "h": 169},
+      "note": "Two consultation controls and their distinct icon, title and supporting text elements."
+    },
+    {"id":"membership-icon","kind":"chrome","pixelBox":{"x":68,"y":906,"w":90,"h":70},"note":"White dumbbell icon inside membership control."},
+    {"id":"membership-label","kind":"text","pixelBox":{"x":174,"y":895,"w":222,"h":52},"note":"Membership consultation label in bold white Korean type."},
+    {"id":"membership-support","kind":"text","pixelBox":{"x":178,"y":952,"w":215,"h":35},"note":"Supporting line stating 24-hour independent fitness."},
+    {"id":"pt-icon","kind":"chrome","pixelBox":{"x":471,"y":902,"w":72,"h":79},"note":"White trainer clipboard icon inside PT control."},
+    {"id":"pt-label","kind":"text","pixelBox":{"x":572,"y":895,"w":222,"h":52},"note":"PT consultation label in bold white type."},
+    {"id":"pt-support","kind":"text","pixelBox":{"x":572,"y":952,"w":230,"h":35},"note":"Supporting line describing one-to-one personal training."},
+    {"id":"trainer-intro-block","kind":"chrome","container":true,"pixelBox":{"x":398,"y":1475,"w":276,"h":107},"note":"Two short introduction lines beside the trainer section title."},
+    {
+      "id": "brand",
+      "kind": "chrome",
+      "pixelBox": {
+        "x": 20,
+        "y": 20,
+        "w": 400,
+        "h": 98
+      },
+      "note": "Brand lockup replaced by the user-requested U vector logo and URBAN GYM wordmark."
+    },
+    {
+      "id": "header-booking",
+      "kind": "control",
+      "pixelBox": {
+        "x": 544,
+        "y": 30,
+        "w": 194,
+        "h": 70
+      },
+      "note": "Red Naver booking button with calendar icon."
+    },
+    {
+      "id": "menu",
+      "kind": "control",
+      "pixelBox": {
+        "x": 770,
+        "y": 43,
+        "w": 51,
+        "h": 44
+      },
+      "note": "Three black menu strokes."
+    },
+    {
+      "id": "location",
+      "kind": "text",
+      "pixelBox": {
+        "x": 37,
+        "y": 158,
+        "w": 151,
+        "h": 31
+      },
+      "note": "Location pin and Jinju Pyeonggeo locality."
+    },
+    {
+      "id": "offer-title",
+      "kind": "text",
+      "pixelBox": {
+        "x": 33,
+        "y": 190,
+        "w": 402,
+        "h": 91
+      },
+      "note": "24-hour fitness and PT service headline in heavy black type."
+    },
+    {
+      "id": "underline",
+      "kind": "plate",
+      "pixelBox": {
+        "x": 34,
+        "y": 265,
+        "w": 404,
+        "h": 47
+      },
+      "note": "Single irregular red ink brush underline beneath the service headline."
+    },
+    {
+      "id": "director-name",
+      "kind": "text",
+      "pixelBox": {
+        "x": 38,
+        "y": 345,
+        "w": 176,
+        "h": 47
+      },
+      "note": "Director Kim Minhu attribution in black Korean type."
+    },
+    {
+      "id": "quote-black",
+      "kind": "text",
+      "pixelBox": {
+        "x": 24,
+        "y": 391,
+        "w": 411,
+        "h": 235
+      },
+      "note": "First two lines of the director quotation in large black Korean type."
+    },
+    {
+      "id": "quote-red",
+      "kind": "text",
+      "pixelBox": {
+        "x": 52,
+        "y": 559,
+        "w": 511,
+        "h": 292
+      },
+      "note": "Final two lines of the director quotation in large red Korean type."
+    },
+    {
+      "id": "portrait",
+      "kind": "plate",
+      "pixelBox": {
+        "x": 429,
+        "y": 137,
+        "w": 424,
+        "h": 731
+      },
+      "note": "Actual director Kim Minhu in the original colour photograph and white URBAN GYM shirt. User requested original colour instead of the comp's black stamped treatment.",
+      "bleed": true
+    },
+    {
+      "id": "membership-action",
+      "kind": "control",
+      "pixelBox": {
+        "x": 34,
+        "y": 870,
+        "w": 386,
+        "h": 135
+      },
+      "note": "Membership consultation button with dumbbell icon, red ink background, and supporting 24-hour fitness text."
+    },
+    {
+      "id": "pt-action",
+      "kind": "control",
+      "pixelBox": {
+        "x": 433,
+        "y": 870,
+        "w": 386,
+        "h": 135
+      },
+      "note": "PT consultation button with trainer icon, black ink background, and supporting one-to-one training text."
+    },
+    {
+      "id": "facility-photo",
+      "kind": "image",
+      "pixelBox": {
+        "x": 0,
+        "y": 1028,
+        "w": 853,
+        "h": 429
+      },
+      "note": "Actual gym floor photograph with cardio machines facing the windows, full bleed.",
+      "bleed": true
+    },
+    {
+      "id": "trainers-heading",
+      "kind": "text",
+      "pixelBox": {
+        "x": 33,
+        "y": 1493,
+        "w": 339,
+        "h": 77
+      },
+      "note": "Trainer introduction section heading in large black Korean type."
+    },
+    {
+      "id": "trainers-intro",
+      "kind": "text",
+      "pixelBox": {
+        "x": 411,
+        "y": 1502,
+        "w": 250,
+        "h": 51
+      },
+      "note": "Short introduction to the real Urban Gym trainer team."
+    },
+    {
+      "id": "trainers-link",
+      "kind": "control",
+      "pixelBox": {
+        "x": 710,
+        "y": 1512,
+        "w": 109,
+        "h": 39
+      },
+      "note": "View all trainers text link and arrow."
+    },
+    {
+      "id": "trainer-kim-minhu",
+      "kind": "text",
+      "pixelBox": {
+        "x": 117,
+        "y": 1614,
+        "w": 92,
+        "h": 67
+      },
+      "note": "Kim Minhu name and director role."
+    },
+    {
+      "id": "trainer-kim-seonghun",
+      "kind": "text",
+      "pixelBox": {
+        "x": 356,
+        "y": 1614,
+        "w": 143,
+        "h": 67
+      },
+      "note": "Kim Seonghun name and pro trainer role."
+    },
+    {
+      "id": "trainer-lee-seunggu",
+      "kind": "text",
+      "pixelBox": {
+        "x": 648,
+        "y": 1614,
+        "w": 125,
+        "h": 67
+      },
+      "note": "Lee Seunggu name and part trainer role."
+    },
+    {
+      "id": "floating-booking",
+      "kind": "control",
+      "pixelBox": {
+        "x": 8,
+        "y": 1723,
+        "w": 417,
+        "h": 111
+      },
+      "note": "Fixed green Naver reservation button with N symbol and arrow."
+    },
+    {
+      "id": "floating-phone",
+      "kind": "control",
+      "pixelBox": {
+        "x": 432,
+        "y": 1723,
+        "w": 413,
+        "h": 111
+      },
+      "note": "Fixed black phone consultation button with phone symbol and arrow."
+    }
+  ]
+}

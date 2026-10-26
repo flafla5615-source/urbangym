@@ -5,10 +5,8 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Location from "@/components/Location";
 import MobileContactBar from "@/components/MobileContactBar";
-import Philosophy from "@/components/Philosophy";
 import Programs from "@/components/Programs";
 import Reasons from "@/components/Reasons";
-import Recovery from "@/components/Recovery";
 import Trainers from "@/components/Trainers";
 import { site } from "@/lib/site";
 
@@ -42,12 +40,10 @@ export default function Home() {
       <Header />
       <main id="main-content" tabIndex={-1}>
         <Hero />
-        <Reasons />
-        <Facilities />
-        <Programs />
         <Trainers />
-        <Recovery />
-        <Philosophy />
+        <Programs />
+        <Facilities />
+        <Reasons />
         <Location />
         <FinalCta />
       </main>
