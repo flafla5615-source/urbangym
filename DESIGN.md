@@ -1,284 +1,258 @@
 ---
-name: "Urban Gym Pyeonggeo"
-description: "Architectural open house: real gym photography, restrained Korean typography and clear contact actions."
+name: "어반짐 평거점"
+description: "A trainer's printed voice, grounded in the real people and spaces of URBAN GYM."
 colors:
-  ink: "#202627"
-  warm-50: "#ffffff"
-  warm-100: "#f3f5f2"
-  warm-200: "#e8ece8"
-  warm-300: "#cdd4cf"
-  warm-400: "#8b9790"
-  warm-500: "#59645f"
-  warm-600: "#49544f"
-  accent: "#344d43"
-  accent-soft: "#b5c5bd"
-  mineral: "#dce5df"
-  action-hover: "#3a5146"
-  tab-hover: "#e0e7e1"
+  accent: "#d10e1c"
+  accent-hover: "#af0c17"
+  ink: "#101012"
+  ink-hover: "#353537"
+  paper: "#f6f6f4"
+  wash: "#ededeb"
+  placeholder: "#e0e0dd"
+  divider: "#c7c7c2"
+  muted: "#64645f"
+  secondary-text: "#51514d"
+  white: "#ffffff"
+  naver: "#087b3e"
+  naver-hover: "#065d2e"
 typography:
   display:
-    fontFamily: "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, \"Apple SD Gothic Neo\", sans-serif"
-    fontSize: "clamp(48px, 5.25vw, 78px)"
-    fontWeight: 600
-    lineHeight: 1.16
+    fontFamily: "Black Han Sans, Pretendard Variable, sans-serif"
+    fontSize: "clamp(42px, 13.2vw, 64px)"
+    fontWeight: 400
+    lineHeight: 1.01
     letterSpacing: "-0.035em"
   headline:
-    fontFamily: "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, \"Apple SD Gothic Neo\", sans-serif"
-    fontSize: "clamp(32px, 3.3vw, 48px)"
-    fontWeight: 600
-    lineHeight: 1.25
-    letterSpacing: "-0.03em"
-  title:
-    fontFamily: "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, \"Apple SD Gothic Neo\", sans-serif"
-    fontSize: "28px"
-    fontWeight: 600
-    lineHeight: 1.3
+    fontFamily: "Black Han Sans, Pretendard Variable, sans-serif"
+    fontSize: "clamp(32px, 4.3vw, 54px)"
+    fontWeight: 400
+    lineHeight: 1.2
     letterSpacing: "-0.025em"
+  title:
+    fontFamily: "Pretendard Variable, Pretendard, sans-serif"
+    fontSize: "19px"
+    fontWeight: 800
   body:
-    fontFamily: "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, \"Apple SD Gothic Neo\", sans-serif"
+    fontFamily: "Pretendard Variable, Pretendard, sans-serif"
     fontSize: "16px"
+    fontWeight: 400
+    lineHeight: 1.8
+  supporting:
+    fontFamily: "Pretendard Variable, Pretendard, sans-serif"
+    fontSize: "14px"
     fontWeight: 400
     lineHeight: 1.7
   label:
-    fontFamily: "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, \"Apple SD Gothic Neo\", sans-serif"
+    fontFamily: "Pretendard Variable, Pretendard, sans-serif"
     fontSize: "15px"
-    fontWeight: 600
-    lineHeight: 1.7
-  label-small:
-    fontFamily: "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, \"Apple SD Gothic Neo\", sans-serif"
-    fontSize: "14px"
-    fontWeight: 600
-    lineHeight: 1.7
-  navigation:
-    fontFamily: "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, \"Apple SD Gothic Neo\", sans-serif"
-    fontSize: "14px"
-    fontWeight: 400
-    lineHeight: 1.7
-  wordmark:
-    fontFamily: "Manrope, \"Pretendard Variable\", Pretendard, sans-serif"
-    fontSize: "21px"
-    fontWeight: 800
-    lineHeight: 1.05
-    letterSpacing: "-0.025em"
-  tab:
-    fontFamily: "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, \"Apple SD Gothic Neo\", sans-serif"
-    fontSize: "15px"
-    fontWeight: 400
-    lineHeight: 1.7
+    fontWeight: 700
 rounded:
   flat: "0px"
+  control: "3px"
+  action: "4px"
 spacing:
-  detail: "8px"
-  control-block: "16px"
+  paired-gap: "7px"
+  compact: "10px"
+  small: "12px"
+  base: "16px"
+  control-x: "20px"
   content: "24px"
-  grid: "32px"
-  layout: "40px"
-  heading-bottom: "56px"
-  desktop-gutter: "64px"
-  section-mobile: "68px"
-  section-tablet: "84px"
-  section-desktop: "112px"
+  group: "28px"
+  block: "32px"
+  profile-gap: "40px"
+  section-mobile: "64px"
+  section-desktop: "100px"
 components:
-  button-dark:
+  button-primary:
+    backgroundColor: "{colors.accent}"
+    textColor: "{colors.white}"
+    typography: "{typography.label}"
+    rounded: "{rounded.control}"
+    padding: "12px 20px"
+  button-primary-hover:
+    backgroundColor: "{colors.accent-hover}"
+  button-outline:
+    backgroundColor: "transparent"
+    textColor: "{colors.ink}"
+    typography: "{typography.label}"
+    rounded: "{rounded.control}"
+    padding: "12px 20px"
+  button-outline-hover:
     backgroundColor: "{colors.ink}"
-    textColor: "{colors.warm-50}"
-    typography: "{typography.label}"
-    rounded: "{rounded.flat}"
-    padding: "16px 24px"
-  button-dark-hover:
-    backgroundColor: "{colors.action-hover}"
-  button-white:
-    backgroundColor: "{colors.warm-50}"
+    textColor: "{colors.white}"
+  button-light:
+    backgroundColor: "{colors.paper}"
     textColor: "{colors.ink}"
     typography: "{typography.label}"
-    rounded: "{rounded.flat}"
-    padding: "16px 24px"
-  button-white-hover:
-    backgroundColor: "{colors.mineral}"
-  text-action:
-    typography: "{typography.label}"
-    rounded: "{rounded.flat}"
-    padding: "13px 0"
-  facility-tab:
-    textColor: "{colors.warm-600}"
-    typography: "{typography.tab}"
-    rounded: "{rounded.flat}"
-    padding: "12px 24px"
-  facility-tab-selected:
+    rounded: "{rounded.control}"
+    padding: "12px 20px"
+  button-light-hover:
+    backgroundColor: "{colors.placeholder}"
+  consultation-membership:
+    backgroundColor: "{colors.accent}"
+    textColor: "{colors.white}"
+    rounded: "{rounded.action}"
+    padding: "10px"
+  consultation-pt:
     backgroundColor: "{colors.ink}"
-    textColor: "{colors.warm-50}"
-  facility-tab-hover:
-    backgroundColor: "{colors.tab-hover}"
-  header-navigation:
-    backgroundColor: "{colors.warm-50}"
+    textColor: "{colors.white}"
+    rounded: "{rounded.action}"
+    padding: "10px"
+  profile-disclosure:
     textColor: "{colors.ink}"
-    typography: "{typography.navigation}"
-  trainer-disclosure:
-    textColor: "{colors.ink}"
-    typography: "{typography.label-small}"
-    rounded: "{rounded.flat}"
-  program-row:
-    rounded: "{rounded.flat}"
-    padding: "42px 0"
-  mobile-contact:
-    backgroundColor: "{colors.warm-50}"
-    textColor: "{colors.ink}"
-    typography: "{typography.label-small}"
-    padding: "10px 16px calc(10px + env(safe-area-inset-bottom, 0px))"
+    padding: "8px 0 24px"
+  mobile-booking:
+    backgroundColor: "{colors.naver}"
+    textColor: "{colors.white}"
+    rounded: "{rounded.action}"
+    height: "52px"
+  mobile-phone:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.white}"
+    rounded: "{rounded.action}"
+    height: "52px"
 ---
 
-# Design System: Urban Gym Pyeonggeo
+# Design System: 어반짐 평거점
 
 ## Overview
 
-**Creative North Star: "Architectural open house"**
+**Creative North Star: "The Trainer's Printed Voice"**
 
-Urban Gym is presented as a real place to enter and inspect. Broad photographs, clean Korean headings and generous circulation take their character from the gym's white interiors, dark equipment and mineral-green furnishings. The interface feels like restrained architectural signage: direct, spacious and easy to follow.
+A trainer speaks in large black and red type, beside an original color portrait. The visual character comes from a printed stage page: condensed weight, a slight rotation, real ink wear, and a clear speaker. Calm neutral space and plain service information make that expressive voice usable for a local gym.
 
-White and pale surfaces keep the page open, while graphite anchors text, selected states and contact actions. Rectangular image frames, thin rules and quiet controls leave the actual facility and supplied portraits in charge. The approved world is recorded from the finished homepage; DESIGN.reference.md is a reference study, not the implemented system.
+Photography supplies the evidence. Keep the actual trainers, facility photographs, and U mark recognizable. The page gives membership and PT consultation equal visual weight. It uses a strong first statement, then straight photographic sections and readable profiles; the expressive material does not turn every paragraph into a poster.
 
 **Key Characteristics:**
-- Real facility photographs and supplied portraits carry the visual identity.
-- Pretendard carries Korean content; Manrope gives the Latin wordmark and functional metadata a distinct voice.
-- Wide rectangular images, ruled rows and square actions establish the form language.
-- White, graphite and mineral surfaces create depth without lifting the main page into cards.
-- Responsive single-column flow retains a persistent route to membership and PT enquiries.
 
-Source of truth: the rendered `app/page.tsx` route, `app/globals.css`, `app/layout.tsx` and the components imported by that route. Desktop and mobile hero captures in `.impeccable/review/` confirm the photographic scale, type relationship and square controls. This record follows the approved direction in `.impeccable/urban-direction.md`.
+- Black display type with red emphasis on a light neutral field.
+- Original color portraits and real facility photography.
+- Printed wear confined to the lead quotation and paired consultation backgrounds.
+- Flat, square photographic sections with small control corners.
+- Clear booking and phone actions, including a green Naver action on mobile.
 
 ## Colors
 
-The palette echoes white interiors, graphite equipment and quiet mineral-green furnishings. The frontmatter owns exact color values; the existing `warm-*` names are retained even though these are neutral-to-green greys.
+The palette is an ink-and-paper system with a direct red accent and one service-specific green. The frontmatter owns the exact values.
 
 ### Primary
 
-- **Graphite** (`ink`): main text, selected facility tabs, dark actions and the final contact field.
-- **Deep mineral** (`accent`): restrained link-hover emphasis and profile-history group labels.
-- **Action green** (`action-hover`): the hover surface of the dark rectangular action.
+- **Spoken Red** (`accent`): emphasized quotation lines, booking buttons, links, credential subheads, selection, and the final contact field.
+- **Pressed Red** (`accent-hover`): hover response for solid red controls.
+
+### Secondary
+
+- **Naver Green** (`naver`, `naver-hover`): the fixed mobile Naver booking action and its hover state. This identifies the service; it is not a second editorial accent.
 
 ### Neutral
 
-- **White** (`warm-50`): page ground, header, inverse text and light actions.
-- **Gallery ground** (`warm-100`): facility and footer backgrounds.
-- **Pale stone** (`warm-200`): image loading ground, caption band, mobile booking action and light separators.
-- **Fine rule** (`warm-300`): repeated dividers and tab underlines.
-- **Muted mineral** (`warm-400`): small list markers and the scrollbar thumb.
-- **Secondary text** (`warm-500`): descriptive copy, captions and supporting information.
-- **Reading grey** (`warm-600`): longer descriptive text and inactive tab labels.
-- **Selection sage** (`accent-soft`): text-selection background.
-- **Mineral wash** (`mineral`): the broad philosophy section and white-action hover.
-- **Tab wash** (`tab-hover`): inactive facility-tab hover.
+- **Printed Black** (`ink`, `ink-hover`): main text, the PT consultation action, the dark program field, and the phone action; the lighter ink is an interactive dark hover.
+- **Neutral Paper** (`paper`): body, sticky header, light buttons, and mobile contact-bar surface.
+- **Paper Wash** (`wash`): the recovery/about field and map container.
+- **Photo Ground** (`placeholder`): the photo loading ground, light-button hover, and quiet borders.
+- **Rule Gray** (`divider`): profile/index dividers and disclosure closing rules.
+- **Reading Gray** (`muted`, `secondary-text`): supporting information and longer secondary copy.
+- **Reverse White** (`white`): text on ink, red, and service-green actions.
 
-**The Graphite Anchor Rule.** Use graphite for the strongest reading and action anchors. Mineral surfaces support the photographs and quiet sections; they do not compete with contact actions.
-
-The sidecar's tonal strips are synthesized inspection aids, not additional colors shipped by the page.
+**The Service Color Rule.** Keep Naver green attached to Naver booking. General page emphasis remains black and red.
 
 ## Typography
 
-**Display Font:** Pretendard Variable, with the source fallback stack recorded in the frontmatter.  
-**Body Font:** Pretendard Variable, using the same Korean-capable stack.  
-**Latin Identity Font:** Manrope, loaded through `next/font`, with Pretendard fallback.
+**Display Font:** local Black Han Sans, falling back to Pretendard Variable and sans-serif. Load the supplied `/fonts/BlackHanSans-UI.ttf`; its implemented weight is normal (400).
 
-**Character:** Korean text remains calm and clear, with semibold headings rather than heavy sports-poster lettering. The tighter Latin wordmark provides a compact signature without changing the headline voice.
+**Body Font:** local Pretendard Variable, followed by Pretendard, platform sans fonts, and sans-serif. Load `/fonts/PretendardVariable.woff2` with its variable weight range.
+
+**Character:** The display face is blunt and tightly packed. Pretendard keeps navigation, names, qualifications, and practical information clear. Preserve Korean words with `word-break: keep-all` and allow emergency wrapping.
 
 ### Hierarchy
 
-- **Display:** the hero headline uses the frontmatter display role. At widths up to 1099px it is 64px; up to 700px it becomes `clamp(41px, 10.8vw, 66px)`.
-- **Headline:** standard section headings use the frontmatter headline role. On small screens they become 34px, then 31px below 360px. Recovery, philosophy and contact have local size adjustments to suit their split layouts.
-- **Title:** program titles use the title role. Trainer names use the same semibold, tight-tracked character at 27px desktop and 26px mobile.
-- **Body:** default reading text uses the body role. Supporting descriptions commonly use 15px, with line heights between 1.85 and 1.9; section introductions are capped at 52ch and program descriptions at 42ch.
-- **Label:** actions use the label role. Navigation is lighter; disclosure and mobile-contact labels use the smaller semibold role.
-- **Wordmark:** the Latin brand uses the wordmark role, reducing to 19px at 1250px and below. The Korean branch line remains in Pretendard.
-- **Functional metadata:** Manrope is also used for small Latin program translations, photo counters and the contact number. These remain subordinate to Korean content.
+- **Display:** the lead quotation uses the frontmatter's mobile clamp; desktop changes to `clamp(72px, 7.1vw, 96px)` with line-height `.94`. At widths below 360px it is `43px`. The quotation rotates `-4deg`; each semantic line is horizontally compressed to `.86`.
+- **Headline:** section titles use the recorded fluid headline role. The lead service heading uses `clamp(24px, 7.4vw, 32px)` on mobile and `clamp(42px, 5vw, 66px)` from 768px, rotated `-3deg`. Trainer-section heading is `48px` on desktop.
+- **Title:** facility captions use the title role. Trainer names are heavier reading type: `29px` on mobile and `27px` from 768px; the adjacent role is smaller and muted.
+- **Body:** ordinary narrative sits around `15–16px` with open `1.7–1.85` line-height. Program and about copy stay near `38–43ch`.
+- **Supporting:** captions, qualifications, and profile secondary lines use the supporting role.
+- **Label:** action text uses the label role. The hero's paired consultation labels use the display family, reaching `27px` on desktop.
 
-**The Korean First Rule.** Set Korean headlines in the content family at a restrained semibold weight. Reserve Manrope for the Latin wordmark, short Latin metadata and tabular counters.
-
-Body copy uses `word-break: keep-all` and `overflow-wrap: break-word`. Section headings use balanced wrapping; the hero preserves its deliberate line break.
+**The Speaker Rule.** Keep the large quotation as selectable semantic text with an adjacent attribution. The ink mask is a decorative layer, never an image replacement for the words.
 
 ## Layout
 
-The content container is centered, capped at 1488px including its gutters. Horizontal padding steps from 64px to 40px at 1250px, 24px at 800px, and 20px below 360px. Standard section padding is 112px, then 84px at 1099px and 68px at 700px. These are observed layout roles, not a fabricated universal spacing scale.
+The common centered container has a maximum width of `1320px`, including its padding. Default horizontal padding is `24px`, then `40px` from 768px and `56px` from 1024px. Header, opening composition, and trainer section use `16px` side padding below 768px.
 
-Section introductions use a 1.2:1 grid with a 64px gap and a 56px bottom margin. They stack at 800px, with a 24px gap and 36px bottom margin. The program list uses title, description and action columns; actions move below descriptions at 800px and the entire row becomes one column at 700px. The three-column trainer layout becomes one column at 700px.
+Use a single column for main content on mobile. From 768px, trainer profiles form three equal columns with a `22px` gap; programs use two equal columns with a `64px` gap; the facility grid uses two columns, with its final featured image spanning both. About and location use unequal two-column layouts. Standard sections use the section-mobile and section-desktop spacing tokens.
 
-The hero spans the viewport width. Its copy and bottom action group align to the content gutters. At desktop the photograph has a 610px minimum height and a viewport-related height capped at 760px; mobile keeps a generous photograph with a 590px minimum. Facility photography uses a wide frame, while trainer portraits use a 4:5 ratio. Image crops are individually set with `object-position`, not stretched.
+The two hero consultation actions remain equal columns at every viewport: a `7px` gap and `64px` minimum height on mobile; a `14px` gap, `86px` minimum height, and `16px 24px` padding from 768px. Their desktop group is capped at `900px`.
 
-The header is sticky and measures 88px high on desktop, 76px below 1100px, and 72px at 700px. Below 1100px the navigation becomes a button-controlled menu and a fixed bottom contact strip appears. The strip includes safe-area padding, paired with page-bottom clearance so content remains reachable. Horizontal facility-tab scrolling stays inside the tab region.
+The header is sticky: `64px` high on mobile and `76px` from 768px. Desktop navigation replaces the menu control at 1024px. Below that breakpoint, reserve `67px + env(safe-area-inset-bottom)` beneath the document for the fixed contact bar. Anchor scrolling leaves room for the header.
 
-The sidecar records every CSS breakpoint that changes the main layout. The map integration additionally uses Tailwind's 640px and 1024px layout variants.
+Below 360px, tighten header gaps and consultation padding, hide consultation arrows, and keep the two consultation paths intact. Do not force the large-screen layout onto narrow screens.
 
 ## Elevation & Depth
 
-The main page has no card shadows. It gains depth from the photography itself, light and dark section planes, restrained rules and spacing. The hero uses two dark photographic overlays to preserve white-text contrast while retaining the room's windows and equipment. This is an image-legibility treatment, not a reusable decorative surface.
+The active page has no box-shadow vocabulary. Depth comes from full-width tonal fields, typography in front of the portrait, image crops, thin rules, and the sticky/fixed layers. Header and hero controls use stacking only where the composition or navigation requires it.
 
-**The Flat Frame Rule.** Main page surfaces stay flat. Establish hierarchy through photographs, tonal sections, whitespace and thin rules rather than repeating elevated cards.
+**The Flat Evidence Rule.** Let real photographs and type establish the hierarchy. Keep profile, program, and facility content flat rather than lifting it into repeated floating cards.
 
-The retained Naver map marker has its own rounded, shadowed treatment. That existing integration exception is not a page-surface elevation token, so the sidecar's normative shadow list is empty.
+The lead quotation enters once over `.6s` with `cubic-bezier(.16,1,.3,1)`, moving only `5px` while retaining its rotation. Control background/color changes and the disclosure indicator use `.2s ease`. With reduced motion, disable animation, shorten transitions to `.01ms`, and use immediate anchor scrolling. Body sections do not depend on reveal animation.
 
 ## Shapes
 
-Actions, tabs, main content panels and photographs have square corners. Thin horizontal rules organize information; they replace the need for a raised enclosure around each item. The circular outline in the U monogram is an identity mark, not a general container shape.
+Photographs and section fields are rectangular and unframed. Small controls use the control radius; paired consultations and fixed contact actions use the action radius. The U logo is a reusable vector silhouette rendered in one ink or reversed against a dark field.
 
-Inline SVG icons use a 24-unit view box, current-color strokes and rounded stroke ends. Action arrows render at 21px; header-contact arrows at 18px; mobile-contact icons at 19px. Icons support real actions and disclosures.
+Printed wear comes from the actual raster luminance mask imported by the hero, repeated at `640px 640px`. Apply it to the lead quotation lines and to the background pseudo-elements of the paired consultations. Keep button labels, icons, and focus outlines outside the mask. The short red underline is a decorative raster accent with empty alternative text.
+
+Use thin one-pixel rules to organize profiles and service lists. Inline icons use the established `24×24` SVG viewBox, current color, rounded strokes, and a default `1.5` stroke width.
 
 ## Components
 
 ### Buttons
 
-Rectangular actions feel like clear signage.
+Direct, compact actions with a minimum height of `48px`; the frontmatter records the control shape and padding. The three implemented variants are red solid, black outline, and light reverse. Hover darkens the red, fills the outline with ink, or changes the light field to Photo Ground. Keep the optional arrow as inline SVG.
 
-- **Dark:** graphite ground with white text, using the frontmatter padding and label role. Minimum height is 58px; content and arrow are separated by 32px.
-- **White:** white ground and graphite text, used over the hero photograph and dark contact field. Hover shifts to mineral wash.
-- **States:** color transitions take 180ms. Global keyboard focus uses a 3px mineral-green outline with a 5px offset; on dark hero/contact fields it becomes a pale outline.
-- **Mobile hero:** action height becomes at least 53px with 13px text and narrower inline padding. The page does not force every button to use this local variant.
+Keyboard focus uses a red `3px` outline with a `4px` offset. Do not introduce disabled, validation, or loading styles as though they already exist; the current page has no form fields.
 
-### Text Actions
+### Paired consultations
 
-An underlined text action is the quieter recurring route. It has a 48px minimum target height, bottom border, 28px text-to-icon gap and the recorded block padding. Only its arrow moves on hover, translating 4px over 180ms. The hero reservation link uses a related dedicated underline treatment.
+Equal choices with distinct fills: red membership and ink PT. Each contains a line icon, a display label, a brief description, and an optional trailing arrow. Both open the confirmed booking destination. Their shared print mask belongs to the background pseudo-element, preserving legibility of the white contents.
 
-### Facility Tabs
+### Trainer profiles and disclosures
 
-These are functional tabs, not category badges. Inactive tabs carry reading-grey text and a fine bottom rule; the selected tab has a graphite fill and white text. Hover uses tab wash. The focus outline moves inside the tab so it remains visible within the scrolling row.
+Original color photos lead flat profiles. Use the `4 / 4.8` image ratio and preserve the supplied crop intent. A name, role, actual quotation, and short credentials precede a native `details / summary` disclosure.
 
-Only the active panel is shown. Arrow keys, Home and End move focus and selection; inactive tabs leave the regular tab order. The photograph reveals with a restrained 500ms right-edge clip animation using `cubic-bezier(.16,1,.3,1)`. Reduced-motion preference disables it.
-
-### Ruled Rows / Containers
-
-Programs use flat, ruled rows with a stronger top border on the list and quieter dividers between rows. Their desktop columns distinguish the program title, explanation and action without a card background. Introductory facts use the same rule-first approach in a three-column arrangement that stacks on mobile.
-
-### Trainer Profiles and Disclosures
-
-Portraits are rectangular, followed by name, role, the person's own words and a short history. A native `details` disclosure holds the complete profile. The summary is a 58px minimum target between thin rules; its arrow rotates from down to up and its text changes when open. The native disclosure provides the interactive state without a decorative container.
+The summary has a minimum height of `56px`, an ink top rule, and a light lower rule. A CSS plus becomes a minus when open, and the label changes from opening the full profile to collapsing it. Expanded credentials use grouped headings and readable lists. Focus sits inside the summary edge with a negative outline offset.
 
 ### Navigation
 
-The white sticky header has a pale bottom rule. Latin identity sits to the left, understated Korean section links occupy the center, and the contact action sits to the right. Desktop links underline on hover. The mobile menu uses full-width ruled rows; its toggle exposes expanded state, Escape closes it and returns focus, and crossing to desktop closes it.
+The header pairs the U mark with URBAN GYM and a small location subtitle. This location text is factual identity information. Desktop links are medium-weight reading type and turn red on hover. The booking action remains visible beside the mobile menu control.
 
-### Mobile Contact Strip
+The mobile menu uses `52px` minimum-height ruled rows, an explicit expanded state, Escape-to-close behavior, and scrollable overflow. Closing it restores document scroll. Keep the skip link hidden until keyboard focus.
 
-Two square actions stay visible below 1100px: a graphite membership/PT action and a pale booking action. Each has a 48px minimum target; the strip uses a 1.15:1 split and safe-area-aware padding. Its previews in the sidecar show the control itself without fixing it to the preview canvas.
+### Mobile contact bar
 
-### Fields
+A two-column fixed bar, visible below 1024px, gives Naver booking and telephone contact equal widths. Actions are `52px` high, green and ink respectively. The container includes safe-area padding and a top rule. Do not let it cover the final page content.
 
-The shipped homepage has no input or form-field primitive. None is invented in this record.
+### Photography and map
+
+Facility photos remain original color images of the actual location, with descriptive alternative text and deliberate object positions. Standard facility figures use `4/3`; the desktop feature uses `2.3`. The full-bleed opening facility photograph is a separate spatial beat.
+
+The map lives in an iframe within the neutral map panel. Keep the textual address, direct Naver-map link, and existing parking inquiry copy accessible when the third-party map cannot render. The map caption remains outside the iframe.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** use the actual gym photographs and supplied trainer portraits, with deliberate object-position crops.
-- **Do** keep square actions, large rectangular image frames and fine dividers as the shared form language.
-- **Do** use the recorded display and headline roles with balanced Korean line breaks.
-- **Do** retain visible focus, keyboard tab navigation, native trainer disclosures and reduced-motion behavior.
-- **Do** preserve the mobile contact strip's safe-area spacing and matching page-bottom clearance.
+- **Do** preserve original color trainer portraits, real facility photographs, and the vector U identity.
+- **Do** keep membership and PT consultation equal in width and visual importance.
+- **Do** use the supplied local display and body fonts with the observed role separation.
+- **Do** keep the lead quotation selectable, attributed, and linked in meaning to the real profile.
+- **Do** preserve keyboard focus, native profile disclosure, reduced motion, safe-area spacing, and a direct map fallback.
+- **Do** use confirmed names, credentials, contact details, and service facts from the product sources.
 
 ### Don't:
 
-- **Don't** introduce decorative eyebrows above the page's Korean section headings.
-- **Don't** replace real facility evidence with generated gym imagery.
-- **Don't** turn the main page into repeated rounded, shadowed icon cards.
-- **Don't** promote the unused legacy pill-button component or the scoped map-widget styling into the new page system.
-- **Don't** add ambient scroll reveals, parallax or image zoom to the current photographic surfaces.
-
-Not canonized or repaired: unused legacy `Button`, `Audience`, `Reveal` and `SectionHeading` patterns; the retained map marker's rounded shadow; and the map loading/error fallback's pill link and glyph arrow. These are unmounted legacy code or a scoped integration exception, not durable rules for new surfaces. This documentation pass changes no frontend behavior.
-
+- **Don't** replace real people or facilities with generated or stock evidence, fabricated testimonials, or invented performance claims.
+- **Don't** desaturate the user-approved original color portraits.
+- **Don't** turn printed wear into a treatment for body copy, profile credentials, or control labels.
+- **Don't** add floating-card shadows, pill-shaped photo frames, or repeated reveal effects to the flat sections.
+- **Don't** use Naver green as a general brand accent.
+- **Don't** invent prices, discounts, parking terms, or round-the-clock consultation staffing from the confirmed 24-hour gym operation.

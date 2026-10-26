@@ -1,0 +1,21 @@
+{
+  "tool": "image_gen",
+  "origin": "generated",
+  "file": "assets/plates/button-ink-mask.png",
+  "width": 1254,
+  "height": 1254,
+  "promptFile": "assets/plates/button-ink.prompt.txt",
+  "prompt": "Asset type: a production grayscale luminance mask for subtle letterpress ink texture on semantic website text and solid-color button backgrounds. Create a perfectly flat, uniformly lit, seamless 1024 by 1024 pixel texture tile. The image is almost completely pure opaque white: at least 96 percent of the canvas stays pure white. Across it, scatter sparse tiny neutral-gray ink pinholes and a few darker gray microscopic dots, with irregular but uniform density from edge to edge. Each individual mark is one to three pixels across at final resolution, separated by generous white space. The marks mimic delicate small pores in otherwise solid printed ink, not damage. This is a mask: white preserves the website's existing color and the tiny dark dots create restrained uninked pinholes. Keep the overall mask extremely light so large typography remains solid, readable, and high contrast, and the same file adds a quiet printed finish to red and black button backgrounds. No large shapes or blobs, no edge concentration or framing, no gradients, clouds, paper folds, scratches, cracks, torn areas, fibers, stains, borders, logos, letters, icons, UI, shadows, depth, illumination effects or color tint. Output one opaque white-and-neutral-gray raster mask only, not a page, not a button, not a sample presentation.",
+  "generatedOriginal": "C:\\Users\\djmon\\.codex\\generated_images\\01a17858-0550-7df1-8929-c6b7925c4bf6\\exec-eec428f1-f7b3-4686-bac4-de78925f47fc.png",
+  "referenceIntent": "Fine printed ink pores from .impeccable/mocks/decision/voices.png; no page artwork copied.",
+  "usage": "Grayscale luminance mask shared by semantic quotation and consultation backgrounds.",
+  "sampleStep": 8,
+  "sampleCount": 24649,
+  "meanLuminance": 253.73,
+  "lightSampleFraction": 0.9946,
+  "darkSampleFraction": 0.00101,
+  "minimumAlphaSample": 255,
+  "visualInspection": "Uniform sparse microscopic pinholes; no labels, controls, larger stains or heavy edge distress.",
+  "approved": false,
+  "gateScore": "unscored"
+}

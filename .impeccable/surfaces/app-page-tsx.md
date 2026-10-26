@@ -2,32 +2,23 @@
 version: 1
 slug: "app-page-tsx"
 primary_target: "app/page.tsx"
-related_targets: ["components/Hero.tsx","components/Facilities.tsx","app/globals.css"]
+related_targets: ["components/Hero.tsx","components/Trainers.tsx","app/globals.css"]
 ---
 
-# Urban Gym homepage direction
+# 어반짐 평거점 홈
 
-## Mode
-Persuade. Balance membership and personal training enquiries.
+Visitor mode: Persuade. Mobile-first; membership and PT consultation carry equal weight. Approved reference: `.impeccable/mocks/decision/voices.png`, chosen by the user on 2026-10-26. The user additionally requested the new U logo in place of the comp's old logo.
 
-## THESIS
-An open house at the real Pyeonggeo gym. Spacious photography lets a visitor judge the place before a plain, direct invitation to enquire.
+## Direction contract
 
-## OWN-WORLD
-Architectural open house. Existing white interiors, dark equipment, windows and mineral green furnishings inform the palette. Large rectangular images, restrained signage and clean circulation replace floating cards.
+THESIS: 실제 트레이너의 사진과 원문 발언이 먼저 보이는 홈페이지. 추상적인 웰니스 표제와 같은 카드의 반복을 걷어낸다.
 
-## STORY
-Visit the room, choose how to train, meet the people, understand the recovery spaces, then find the address and contact details.
+OWN-WORLD: Massin 무대 페이지의 검정 활자·붉은 발화 강조를 체육시설에 적용한다. 인물 사진은 사용자 검토 의견에 따라 가공하지 않은 원본 컬러 사진을 쓴다. 배경은 밝은 중성색, 큰 인용문과 작은 안내를 분명히 구분한다. UI 문장은 읽을 수 있는 크기로 유지한다.
 
-## FIRST VIEWPORT
-A single real free-weight photograph with a left-aligned Korean headline. Opening hours, Pyeonggeo location, membership/PT phone and Naver booking are visible together. No claim of results or invented prices.
+STORY: 평거동의 24시간 헬스·PT임을 안다. 대표의 실제 말과 사진을 보고 회원권·PT 상담을 고른다. 실제 시설, 트레이너 전체 프로필, 위치를 확인하고 네이버 예약 또는 전화로 연결한다.
 
-## FORM
-Seed reference: seed:9a233bc45a202df0.
-Manrope Latin wordmark, Pretendard Korean; graphite #202627, white #ffffff, mineral #dce5df. Flat ruled rows and generous spacing. Five accessible facility tabs, native profile disclosures, fixed mobile contact strip. Headings carry no eyebrows. Nike reference supplies discipline and photographic scale, not proprietary brand assets.
+FIRST VIEWPORT: 새 U 로고와 예약·메뉴, 24시간 헬스·PT 표제, 왼쪽의 큰 대표 인용문과 오른쪽 원본 컬러 인물 사진, 회원권·PT 두 상담 버튼, 넓은 운동 공간 사진, 트레이너 이름 목록이 이어진다. 모바일 하단 예약·전화 고정 바를 유지한다. Signature interaction: 대표의 인용문에서 트레이너 목록·전체 프로필로 이동하며 실제 발화자와 경력이 연결된다. Motion: 첫 인물과 인용문에만 짧은 인쇄 등장 효과를 주고 나머지 본문은 즉시 읽힌다. Reduced motion은 정지 상태다.
 
-## FINISH
-Real loaded images at 320/390/768/1024/1440 widths. Keyboard menus/tabs/details, reduced motion and correct Naver map. Original trainer quotations, qualifications, supplied photographs, phone, address and booking destinations preserved. No generated gym imagery.
+FORM: user-chosen challenger `massin-stage-page`; initial grounded assignment position 3, user choice overrides it. seed:0958766128fdc067.
 
-## Decision evidence
-Code-led workflow confirmed by user. Seed reference: seed:9a233bc45a202df0. The user selected Architectural open house on the comparison page (answer: openhouse). See directions.md for candidates and declined challengers.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

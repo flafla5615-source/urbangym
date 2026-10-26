@@ -1,28 +1,50 @@
-# Product
+# 어반짐 평거점
 
 <!-- impeccable:product-schema 1 -->
 
 ## Platform
+
 web
 
 ## Users
-진주 평거동에서 헬스 회원권과 PT를 알아보는 방문자. 사용자가 2026-10-26 헬스와 PT 문의를 균형 있게 늘리는 목표를 선택했다.
+
+진주 평거동에서 헬스장 이용과 PT 상담을 알아보는 방문자. 회원권·PT 상담을 고르게 다룬다는 우선순위는 2026-10-26 사용자가 확인했다.
 
 ## Product Purpose
-실제 시설과 트레이너를 확인한 방문자가 전화 또는 네이버 예약으로 문의하는 어반짐 평거점 홈페이지.
+
+실제 시설과 트레이너를 살펴보고 네이버 예약 또는 전화로 회원권·PT 상담을 신청하는 매장 홈페이지다.
+
+## Operating Context
+
+공개 사이트는 https://urbangym-eight.vercel.app/ 이다. 기존 Next.js App Router·React·Tailwind CSS 프로젝트를 사용하며 GitHub main 변경은 연결된 Vercel 프로젝트에 배포된다.
 
 ## Capabilities and Constraints
-Next.js 15 / React 19 / Tailwind 4. 현재 Vercel 도메인과 메타데이터, 구조화 데이터, 네이버 지도, 전화, 네이버 예약, Instagram 연결을 유지한다. 회원권 가격과 주차 조건은 확인되지 않았으며 임의 작성하지 않는다. 24시간 개방은 상담 인력의 24시간 상주를 뜻하지 않는다.
+
+- 상호: 어반짐 평거점. 영문 표기는 URBAN GYM.
+- 사용자가 확인한 주소: 경남 진주시 순환로 541, 지원빌딩 6·7층 (평거동).
+- 사용자가 확인한 전화: 010-2262-7768. 전화 링크: tel:01022627768.
+- 사용자가 확인한 운영: 24시간 연중무휴. 상담 직원이 24시간 상주한다는 의미로 확대하지 않는다.
+- 네이버 예약: https://m.booking.naver.com/booking/13/bizes/580202?theme=place&entry=pll&lang=ko
+- 하단 플로팅은 네이버 예약과 전화 상담을 제공한다. 위치 안내는 본문에서 유지한다.
+- 최근 운영 소스의 트레이너 3명 소개·상세 경력·프로필 사진과 네이버 지도를 보존한다.
+- 가격, 할인, 주차 지원 조건, 성과 수치는 미확인이다. 기존 문의 안내를 유지하며 새로 만들지 않는다.
 
 ## Brand Commitments
-어반짐 평거점 / URBAN GYM. 자연스러운 한국어 문구와 세련된 디자인 리뉴얼을 사용자가 요청했다. 기존의 부드러운 카드 디자인을 유지할 의무는 없다. 실제 매장 사진과 전달받은 인물 사진, 이름, 자격, 경력, 대회 기록, 당사자 슬로건은 보존한다.
+
+실제 매장과 트레이너 사진, U 로고, 상호를 보존한다. 2026-10-26 사용자는 humanize-korean과 impeccable을 사용해 AI 티가 덜 나고 세련된 리뉴얼을 요청했다. 기존 팔레트·구성의 유지는 요구하지 않았다.
 
 ## Evidence on Hand
-public/images/urbangym의 기존 매장 사진 11장, public/images/trainers의 프로필 사진 3장. lib/trainers.ts에 사용자 제공 프로필 원문. 순환로 541 지원빌딩 6·7층, 연락처 010-2262-7768, 24시간 연중무휴. 사용자 제공 시설 정보: 인텐자 머신, 1:1 맞춤 레슨과 그룹 수업, 개인 스트레칭 공간, 바디프렌드 안마의자. 후기와 성과 수치는 제공되지 않았다.
+
+- 기존 시설 사진: public/images/urbangym/01.jpg ~ 10.jpg, 11.webp.
+- 트레이너 정보: lib/trainers.ts, docs/trainer-profiles.md, public/images/trainers/.
+- 연락처·예약·지도: lib/site.ts.
+- 기존 공유 이미지: public/images/urbangym/kakao-share-v1.png.
+- 사실 확인과 검증 기록: docs/renewal-review.md.
+- 실제 사용 후기와 가격표는 제공되지 않았다.
 
 ## Product Principles
-시설은 실제 사진으로, 전문성은 실명과 이력으로 보여준다. 헬스와 PT에 같은 접근성을 부여한다. 확인되지 않은 가격·효과·희소성을 만들지 않는다. 모바일에서 시설 탐색과 문의가 쉽도록 한다.
 
-## Source note
-OwnerVista 확인: 2026-10-26 완료된 진단 없음. profileVersion 0의 강남동 주소는 기존에 확인한 평거점 주소와 충돌하므로 이번 작업에 반영하지 않는다.
-
+1. 사진과 확인 가능한 정보로 공간을 설명한다.
+2. 회원권과 PT 상담의 비중을 고르게 둔다.
+3. 예약과 전화 연결을 명확히 표시한다.
+4. 사실·프로필·영업 정보는 문체와 구분해 보존한다.
