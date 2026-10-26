@@ -1,0 +1,394 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-26T13:27:09.849Z",
+  "title": "Design System: Urban Gym Pyeonggeo",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Graphite",
+        "tonalRamp": [
+          "oklch(15% 0.00247 208.74)",
+          "oklch(27% 0.00573 208.74)",
+          "oklch(39% 0.00793 208.74)",
+          "oklch(51% 0.00881 208.74)",
+          "oklch(63% 0.00881 208.74)",
+          "oklch(75% 0.00749 208.74)",
+          "oklch(87% 0.00441 208.74)",
+          "oklch(95% 0.00176 208.74)"
+        ]
+      },
+      "warm-50": {
+        "role": "neutral",
+        "displayName": "White",
+        "tonalRamp": [
+          "oklch(15% 0.00000 0.00)",
+          "oklch(27% 0.00000 0.00)",
+          "oklch(39% 0.00000 0.00)",
+          "oklch(51% 0.00000 0.00)",
+          "oklch(63% 0.00000 0.00)",
+          "oklch(75% 0.00000 0.00)",
+          "oklch(87% 0.00000 0.00)",
+          "oklch(95% 0.00000 0.00)"
+        ]
+      },
+      "warm-100": {
+        "role": "neutral",
+        "displayName": "Gallery ground",
+        "tonalRamp": [
+          "oklch(15% 0.00126 134.85)",
+          "oklch(27% 0.00292 134.85)",
+          "oklch(39% 0.00404 134.85)",
+          "oklch(51% 0.00449 134.85)",
+          "oklch(63% 0.00449 134.85)",
+          "oklch(75% 0.00381 134.85)",
+          "oklch(87% 0.00224 134.85)",
+          "oklch(95% 0.00090 134.85)"
+        ]
+      },
+      "warm-200": {
+        "role": "neutral",
+        "displayName": "Pale stone",
+        "tonalRamp": [
+          "oklch(15% 0.00191 145.52)",
+          "oklch(27% 0.00443 145.52)",
+          "oklch(39% 0.00613 145.52)",
+          "oklch(51% 0.00681 145.52)",
+          "oklch(63% 0.00681 145.52)",
+          "oklch(75% 0.00579 145.52)",
+          "oklch(87% 0.00341 145.52)",
+          "oklch(95% 0.00136 145.52)"
+        ]
+      },
+      "warm-300": {
+        "role": "neutral",
+        "displayName": "Fine rule",
+        "tonalRamp": [
+          "oklch(15% 0.00285 155.07)",
+          "oklch(27% 0.00663 155.07)",
+          "oklch(39% 0.00918 155.07)",
+          "oklch(51% 0.01019 155.07)",
+          "oklch(63% 0.01019 155.07)",
+          "oklch(75% 0.00867 155.07)",
+          "oklch(87% 0.00510 155.07)",
+          "oklch(95% 0.00204 155.07)"
+        ]
+      },
+      "warm-400": {
+        "role": "neutral",
+        "displayName": "Muted mineral",
+        "tonalRamp": [
+          "oklch(15% 0.00480 160.39)",
+          "oklch(27% 0.01115 160.39)",
+          "oklch(39% 0.01544 160.39)",
+          "oklch(51% 0.01715 160.39)",
+          "oklch(63% 0.01715 160.39)",
+          "oklch(75% 0.01458 160.39)",
+          "oklch(87% 0.00858 160.39)",
+          "oklch(95% 0.00343 160.39)"
+        ]
+      },
+      "warm-500": {
+        "role": "neutral",
+        "displayName": "Secondary text",
+        "tonalRamp": [
+          "oklch(15% 0.00439 166.66)",
+          "oklch(27% 0.01019 166.66)",
+          "oklch(39% 0.01411 166.66)",
+          "oklch(51% 0.01567 166.66)",
+          "oklch(63% 0.01567 166.66)",
+          "oklch(75% 0.01332 166.66)",
+          "oklch(87% 0.00784 166.66)",
+          "oklch(95% 0.00313 166.66)"
+        ]
+      },
+      "warm-600": {
+        "role": "neutral",
+        "displayName": "Reading grey",
+        "tonalRamp": [
+          "oklch(15% 0.00452 166.50)",
+          "oklch(27% 0.01048 166.50)",
+          "oklch(39% 0.01451 166.50)",
+          "oklch(51% 0.01613 166.50)",
+          "oklch(63% 0.01613 166.50)",
+          "oklch(75% 0.01371 166.50)",
+          "oklch(87% 0.00806 166.50)",
+          "oklch(95% 0.00323 166.50)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Deep mineral",
+        "tonalRamp": [
+          "oklch(15% 0.00982 167.77)",
+          "oklch(27% 0.02280 167.77)",
+          "oklch(39% 0.03156 167.77)",
+          "oklch(51% 0.03507 167.77)",
+          "oklch(63% 0.03507 167.77)",
+          "oklch(75% 0.02981 167.77)",
+          "oklch(87% 0.01754 167.77)",
+          "oklch(95% 0.00701 167.77)"
+        ]
+      },
+      "accent-soft": {
+        "role": "neutral",
+        "displayName": "Selection sage",
+        "tonalRamp": [
+          "oklch(15% 0.00580 164.45)",
+          "oklch(27% 0.01347 164.45)",
+          "oklch(39% 0.01865 164.45)",
+          "oklch(51% 0.02072 164.45)",
+          "oklch(63% 0.02072 164.45)",
+          "oklch(75% 0.01761 164.45)",
+          "oklch(87% 0.01036 164.45)",
+          "oklch(95% 0.00414 164.45)"
+        ]
+      },
+      "mineral": {
+        "role": "neutral",
+        "displayName": "Mineral wash",
+        "tonalRamp": [
+          "oklch(15% 0.00351 156.98)",
+          "oklch(27% 0.00815 156.98)",
+          "oklch(39% 0.01129 156.98)",
+          "oklch(51% 0.01254 156.98)",
+          "oklch(63% 0.01254 156.98)",
+          "oklch(75% 0.01066 156.98)",
+          "oklch(87% 0.00627 156.98)",
+          "oklch(95% 0.00251 156.98)"
+        ]
+      },
+      "action-hover": {
+        "role": "primary",
+        "displayName": "Action green",
+        "tonalRamp": [
+          "oklch(15% 0.00946 163.85)",
+          "oklch(27% 0.02195 163.85)",
+          "oklch(39% 0.03039 163.85)",
+          "oklch(51% 0.03377 163.85)",
+          "oklch(63% 0.03377 163.85)",
+          "oklch(75% 0.02870 163.85)",
+          "oklch(87% 0.01688 163.85)",
+          "oklch(95% 0.00675 163.85)"
+        ]
+      },
+      "tab-hover": {
+        "role": "neutral",
+        "displayName": "Tab wash",
+        "tonalRamp": [
+          "oklch(15% 0.00307 149.85)",
+          "oklch(27% 0.00713 149.85)",
+          "oklch(39% 0.00987 149.85)",
+          "oklch(51% 0.01097 149.85)",
+          "oklch(63% 0.01097 149.85)",
+          "oklch(75% 0.00932 149.85)",
+          "oklch(87% 0.00548 149.85)",
+          "oklch(95% 0.00219 149.85)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline; Korean content family with responsive size overrides."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Standard Korean section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Program names; trainer names use a nearby local size."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default running text."
+      },
+      "label": {
+        "displayName": "Action label",
+        "purpose": "Semibold labels on primary and underlined actions."
+      },
+      "label-small": {
+        "displayName": "Small action label",
+        "purpose": "Native disclosure summaries and mobile contact actions."
+      },
+      "navigation": {
+        "displayName": "Navigation",
+        "purpose": "Quiet desktop section links."
+      },
+      "wordmark": {
+        "displayName": "Latin wordmark",
+        "purpose": "Manrope identity lettering."
+      },
+      "tab": {
+        "displayName": "Facility tab",
+        "purpose": "Regular-weight facility selector labels."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "control-colors",
+        "value": "background-color 180ms, color 180ms",
+        "purpose": "Rectangular actions and facility tabs; browser-default ease."
+      },
+      {
+        "name": "text-arrow",
+        "value": "translate 180ms",
+        "purpose": "Text-action arrow translates 4px horizontally on hover."
+      },
+      {
+        "name": "room-reveal",
+        "value": "500ms cubic-bezier(.16,1,.3,1)",
+        "purpose": "Active facility photograph clip-path changes from inset(0 1.5% 0 0) to inset(0)."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none !important; transition: none !important; scroll-behavior: auto",
+        "purpose": "Applied when prefers-reduced-motion is reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact",
+        "value": "359px"
+      },
+      {
+        "name": "map-padding",
+        "value": "640px"
+      },
+      {
+        "name": "phone",
+        "value": "700px"
+      },
+      {
+        "name": "stack",
+        "value": "800px"
+      },
+      {
+        "name": "map-height",
+        "value": "1024px"
+      },
+      {
+        "name": "tablet-max",
+        "value": "1099px"
+      },
+      {
+        "name": "desktop-nav-min",
+        "value": "1100px"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1250px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Dark Action",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "The square contact action used on light page surfaces.",
+      "html": "<a class=\"ds-action-dark\" href=\"#contact\">회원권 · PT 전화 문의 <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4.8 12h14.4M13.6 6.4l5.6 5.6-5.6 5.6\"/></svg></a>",
+      "css": ".ds-action-dark { display: inline-flex; justify-content: space-between; align-items: center; min-height: 58px; padding: 16px 24px; gap: 32px; font-family: var(--font-sans, \"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, \"Apple SD Gothic Neo\", sans-serif); font-size: 15px; font-weight: 600; line-height: 1.7; text-decoration: none; border-radius: 0; color: var(--color-warm-50, #ffffff); background: var(--color-ink, #202627); transition: background-color 180ms, color 180ms; } .ds-action-dark svg { width: 21px; height: 21px; flex-shrink: 0; } .ds-action-dark:hover { background: #3a5146; } .ds-action-dark:focus-visible { outline: 3px solid #567969; outline-offset: 5px; } @media (prefers-reduced-motion: reduce) { .ds-action-dark { transition: none; } }"
+    },
+    {
+      "name": "White Action",
+      "kind": "button",
+      "refersTo": "button-white",
+      "description": "The inverse contact action used over photography and the dark contact field.",
+      "html": "<div class=\"ds-dark-field\"><a class=\"ds-action-white\" href=\"#contact\">회원권 · PT 문의 <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4.8 12h14.4M13.6 6.4l5.6 5.6-5.6 5.6\"/></svg></a></div>",
+      "css": ".ds-dark-field { background: var(--color-ink, #202627); padding: 24px; } .ds-action-white { display: inline-flex; justify-content: space-between; align-items: center; min-height: 58px; padding: 16px 24px; gap: 32px; font-family: var(--font-sans, \"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, \"Apple SD Gothic Neo\", sans-serif); font-size: 15px; font-weight: 600; line-height: 1.7; text-decoration: none; border-radius: 0; color: var(--color-ink, #202627); background: var(--color-warm-50, #ffffff); transition: background-color 180ms, color 180ms; } .ds-action-white svg { width: 21px; height: 21px; flex-shrink: 0; } .ds-action-white:hover { background: #dce5df; } .ds-action-white:focus-visible { outline: 3px solid #c4d9ce; outline-offset: 5px; } @media (prefers-reduced-motion: reduce) { .ds-action-white { transition: none; } }"
+    },
+    {
+      "name": "Text Action",
+      "kind": "button",
+      "refersTo": "text-action",
+      "description": "A fine underline and moving arrow make a quiet secondary route.",
+      "html": "<a class=\"ds-text-action\" href=\"#facility\">시설 둘러보기 <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4.8 12h14.4M13.6 6.4l5.6 5.6-5.6 5.6\"/></svg></a>",
+      "css": ".ds-text-action { display: inline-flex; justify-content: space-between; align-items: center; width: fit-content; gap: 28px; padding-block: 13px; min-height: 48px; color: inherit; border-bottom: 1px solid currentColor; font-family: var(--font-sans, \"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, \"Apple SD Gothic Neo\", sans-serif); font-size: 15px; font-weight: 600; line-height: 1.7; text-decoration: none; } .ds-text-action svg { width: 21px; height: 21px; flex-shrink: 0; transition: translate 180ms; } .ds-text-action:hover svg { translate: 4px 0; } .ds-text-action:focus-visible { outline: 3px solid #567969; outline-offset: 5px; } @media (prefers-reduced-motion: reduce) { .ds-text-action svg { transition: none; } } .ds-text-action { color: var(--color-ink, #202627); }"
+    },
+    {
+      "name": "Facility Tabs",
+      "kind": "custom",
+      "refersTo": "facility-tab",
+      "description": "A sample of the selected and inactive states of the horizontal facility tablist.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\" aria-label=\"운동 공간 선택\"><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"true\">머신 웨이트</button><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">유산소</button><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">프리 웨이트</button></div>",
+      "css": ".ds-tabs { display: flex; gap: 8px; padding-bottom: 24px; overflow-x: auto; scrollbar-width: thin; } .ds-tab { flex-shrink: 0; font-family: var(--font-sans, \"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, \"Apple SD Gothic Neo\", sans-serif); font-size: 15px; font-weight: 400; line-height: 1.7; min-height: 48px; padding: 12px 24px; color: var(--color-warm-600, #49544f); background: transparent; border: 0; border-bottom: 1px solid var(--color-warm-300, #cdd4cf); border-radius: 0; cursor: pointer; transition: background-color 180ms, color 180ms; } .ds-tab:hover { background: #e0e7e1; } .ds-tab[aria-selected=\"true\"] { background: var(--color-ink, #202627); color: var(--color-warm-50, #ffffff); border-color: var(--color-ink, #202627); } .ds-tab:focus-visible { outline: 3px solid #87a895; outline-offset: -3px; } @media (max-width: 700px) { .ds-tabs { gap: 6px; padding-bottom: 18px; } .ds-tab { padding-inline: 18px; font-size: 14px; } } @media (prefers-reduced-motion: reduce) { .ds-tab { transition: none; } }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "header-navigation",
+      "description": "The quiet desktop section-link row; the app supplies the responsive menu behavior.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"주요 메뉴\"><ul class=\"ds-nav-list\"><li class=\"ds-nav-item\"><a class=\"ds-nav-link\" href=\"#about\">어반짐 소개</a></li><li class=\"ds-nav-item\"><a class=\"ds-nav-link\" href=\"#facility\">시설 둘러보기</a></li><li class=\"ds-nav-item\"><a class=\"ds-nav-link\" href=\"#program\">헬스 · PT</a></li><li class=\"ds-nav-item\"><a class=\"ds-nav-link\" href=\"#trainers\">트레이너 소개</a></li></ul></nav>",
+      "css": ".ds-nav { background: var(--color-warm-50, #ffffff); color: var(--color-ink, #202627); font-family: var(--font-sans, \"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, \"Apple SD Gothic Neo\", sans-serif); } .ds-nav-list { display: flex; align-items: center; gap: 30px; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; } .ds-nav-link { display: inline-block; padding-block: 14px; color: inherit; font-size: 14px; font-weight: 400; line-height: 1.7; text-decoration: none; text-underline-offset: 5px; } .ds-nav-link:hover { text-decoration: underline; } .ds-nav-link:focus-visible { outline: 3px solid #567969; outline-offset: 5px; } @media (max-width: 1250px) { .ds-nav-list { gap: 19px; } }"
+    },
+    {
+      "name": "Trainer Disclosure",
+      "kind": "custom",
+      "refersTo": "trainer-disclosure",
+      "description": "The native profile disclosure with two quiet rules and a directional arrow.",
+      "html": "<details class=\"ds-details\"><summary class=\"ds-summary\"><span class=\"ds-summary-copy\"><span class=\"ds-profile-show\">프로필 자세히 보기</span><span class=\"ds-profile-hide\">프로필 접기</span></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4.8 12h14.4M13.6 6.4l5.6 5.6-5.6 5.6\"/></svg></summary><div class=\"ds-history\"><h4 class=\"ds-history-title\">경력 사항</h4><ul class=\"ds-history-list\"><li class=\"ds-history-item\">전) 머슬팩토리 보건대점 지점장</li><li class=\"ds-history-item\">전) 머슬팩토리 보건대·삼천포·벌리·정촌·시청 지부장</li><li class=\"ds-history-item\">현) 어반짐 지점 대표</li></ul></div></details>",
+      "css": ".ds-details { color: var(--color-ink, #202627); font-family: var(--font-sans, \"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, \"Apple SD Gothic Neo\", sans-serif); border-top: 1px solid #a9b4ad; border-bottom: 1px solid var(--color-warm-300, #cdd4cf); margin-top: 20px; } .ds-summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; min-height: 58px; gap: 12px; font-size: 14px; font-weight: 600; line-height: 1.7; } .ds-summary::-webkit-details-marker { display: none; } .ds-summary svg { width: 20px; height: 20px; rotate: 90deg; } .ds-profile-hide, .ds-details[open] .ds-profile-show { display: none; } .ds-details[open] .ds-profile-hide { display: inline; } .ds-details[open] .ds-summary svg { rotate: -90deg; } .ds-history { padding-block: 8px 28px; font-size: 13px; line-height: 1.9; color: var(--color-warm-600, #49544f); } .ds-history-title { font-size: 15px; color: var(--color-ink, #202627); font-weight: 600; margin: 0 0 10px; } .ds-history-list { list-style: disc; margin: 0; padding-left: 16px; } .ds-history-item + .ds-history-item { margin-top: 4px; } .ds-summary:focus-visible { outline: 3px solid #567969; outline-offset: 5px; } @media (max-width: 700px) { .ds-history { font-size: 14px; } }"
+    },
+    {
+      "name": "Program Row",
+      "kind": "custom",
+      "refersTo": "program-row",
+      "description": "A title, short explanation and contact action aligned on a ruled row.",
+      "html": "<div class=\"ds-program-list\"><article class=\"ds-program-row\"><div class=\"ds-program-title\"><h3 class=\"ds-program-heading\">헬스 회원권</h3><span class=\"ds-program-latin\">FITNESS MEMBERSHIP</span></div><p class=\"ds-program-copy\">24시간 운영하는 어반짐에서 웨이트부터 유산소까지, 나의 루틴에 맞춰 운동해보세요.</p><a class=\"ds-program-action\" href=\"#contact\">회원권 문의 <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4.8 12h14.4M13.6 6.4l5.6 5.6-5.6 5.6\"/></svg></a></article></div>",
+      "css": ".ds-program-list { border-top: 1px solid var(--color-ink, #202627); font-family: var(--font-sans, \"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, \"Apple SD Gothic Neo\", sans-serif); color: var(--color-ink, #202627); } .ds-program-row { display: grid; grid-template-columns: 1fr 1.28fr auto; align-items: start; column-gap: 64px; padding-block: 42px; border-bottom: 1px solid var(--color-warm-300, #cdd4cf); } .ds-program-heading { margin: 0; font-size: 28px; font-weight: 600; letter-spacing: -.025em; line-height: 1.3; } .ds-program-latin { display: block; margin-top: 13px; font-family: var(--font-display, Manrope, \"Pretendard Variable\", Pretendard, sans-serif); font-size: 11px; font-weight: 600; color: var(--color-warm-500, #59645f); letter-spacing: .06em; line-height: 1.7; } .ds-program-copy { color: var(--color-warm-600, #49544f); max-width: 42ch; margin: 0; font-size: 16px; line-height: 1.7; word-break: keep-all; } .ds-program-action { white-space: nowrap; } .ds-program-action { display: inline-flex; justify-content: space-between; align-items: center; width: fit-content; gap: 28px; padding-block: 13px; min-height: 48px; color: inherit; border-bottom: 1px solid currentColor; font-family: var(--font-sans, \"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, \"Apple SD Gothic Neo\", sans-serif); font-size: 15px; font-weight: 600; line-height: 1.7; text-decoration: none; } .ds-program-action svg { width: 21px; height: 21px; flex-shrink: 0; transition: translate 180ms; } .ds-program-action:hover svg { translate: 4px 0; } .ds-program-action:focus-visible { outline: 3px solid #567969; outline-offset: 5px; } @media (prefers-reduced-motion: reduce) { .ds-program-action svg { transition: none; } } @media (max-width: 1250px) { .ds-program-row { column-gap: 32px; } } @media (max-width: 800px) { .ds-program-row { grid-template-columns: 1fr 1.3fr; row-gap: 12px; } .ds-program-action { grid-column: 2; } .ds-program-heading { font-size: 24px; } } @media (max-width: 700px) { .ds-program-row { grid-template-columns: 1fr; padding-block: 30px; gap: 20px; } .ds-program-action { grid-column: auto; } .ds-program-heading { font-size: 25px; } .ds-program-latin { margin-top: 9px; } .ds-program-copy { font-size: 15px; } }"
+    },
+    {
+      "name": "Mobile Contact Strip",
+      "kind": "nav",
+      "refersTo": "mobile-contact",
+      "description": "The paired contact and booking actions, rendered in normal flow for this preview.",
+      "html": "<nav class=\"ds-contact-bar\" aria-label=\"빠른 문의\"><a class=\"ds-contact-link\" href=\"#contact\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7.7 4.2h-2A1.8 1.8 0 0 0 4 6.1c0 7.6 6.3 13.9 13.9 13.9a1.8 1.8 0 0 0 1.9-1.7v-2a1.2 1.2 0 0 0-1-1.2l-2.7-.5a1.2 1.2 0 0 0-1.2.5l-.9 1.2a11.3 11.3 0 0 1-4.9-4.9l1.2-.9a1.2 1.2 0 0 0 .5-1.2l-.5-2.7a1.2 1.2 0 0 0-1.2-1Z\"/></svg>회원권 · PT 문의</a><a class=\"ds-contact-link\" href=\"#contact\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"4\" y=\"5.5\" width=\"16\" height=\"15\" rx=\"2\"/><path d=\"M8 3.5v4M16 3.5v4M4 10h16m-11.5 5 2 2 4-4\"/></svg>네이버 예약</a></nav>",
+      "css": ".ds-contact-bar { display: grid; grid-template-columns: 1.15fr 1fr; gap: 8px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); background: var(--color-warm-50, #ffffff); border-top: 1px solid var(--color-warm-300, #cdd4cf); font-family: var(--font-sans, \"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, \"Apple SD Gothic Neo\", sans-serif); color: var(--color-ink, #202627); } .ds-contact-link { display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 48px; font-size: 14px; font-weight: 600; line-height: 1.7; background: var(--color-warm-200, #e8ece8); color: inherit; text-decoration: none; } .ds-contact-link:first-child { background: var(--color-ink, #202627); color: var(--color-warm-50, #ffffff); } .ds-contact-link svg { width: 19px; height: 19px; flex-shrink: 0; } .ds-contact-link:focus-visible { outline: 3px solid #567969; outline-offset: 5px; } @media (max-width: 359px) { .ds-contact-bar { padding-inline: 10px; gap: 6px; } .ds-contact-link { font-size: 13px; gap: 6px; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Architectural open house",
+    "overview": "Urban Gym is presented as a real place to enter and inspect. Broad photographs, clean Korean headings and generous circulation take their character from the gym's white interiors, dark equipment and mineral-green furnishings. The interface feels like restrained architectural signage: direct, spacious and easy to follow.\n\nWhite and pale surfaces keep the page open, while graphite anchors text, selected states and contact actions. Rectangular image frames, thin rules and quiet controls leave the actual facility and supplied portraits in charge. The approved world is recorded from the finished homepage; DESIGN.reference.md is a reference study, not the implemented system.",
+    "keyCharacteristics": [
+      "Real facility photographs and supplied portraits carry the visual identity.",
+      "Pretendard carries Korean content; Manrope gives the Latin wordmark and functional metadata a distinct voice.",
+      "Wide rectangular images, ruled rows and square actions establish the form language.",
+      "White, graphite and mineral surfaces create depth without lifting the main page into cards.",
+      "Responsive single-column flow retains a persistent route to membership and PT enquiries."
+    ],
+    "rules": [
+      {
+        "name": "The Graphite Anchor Rule",
+        "body": "Use graphite for the strongest reading and action anchors. Mineral surfaces support the photographs and quiet sections; they do not compete with contact actions.",
+        "section": "colors"
+      },
+      {
+        "name": "The Korean First Rule",
+        "body": "Set Korean headlines in the content family at a restrained semibold weight. Reserve Manrope for the Latin wordmark, short Latin metadata and tabular counters.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Frame Rule",
+        "body": "Main page surfaces stay flat. Establish hierarchy through photographs, tonal sections, whitespace and thin rules rather than repeating elevated cards.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use the actual gym photographs and supplied trainer portraits, with deliberate object-position crops.",
+      "Do keep square actions, large rectangular image frames and fine dividers as the shared form language.",
+      "Do use the recorded display and headline roles with balanced Korean line breaks.",
+      "Do retain visible focus, keyboard tab navigation, native trainer disclosures and reduced-motion behavior.",
+      "Do preserve the mobile contact strip's safe-area spacing and matching page-bottom clearance."
+    ],
+    "donts": [
+      "Don't introduce decorative eyebrows above the page's Korean section headings.",
+      "Don't replace real facility evidence with generated gym imagery.",
+      "Don't turn the main page into repeated rounded, shadowed icon cards.",
+      "Don't promote the unused legacy pill-button component or the scoped map-widget styling into the new page system.",
+      "Don't add ambient scroll reveals, parallax or image zoom to the current photographic surfaces."
+    ]
+  }
+}

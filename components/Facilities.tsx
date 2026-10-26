@@ -1,134 +1,48 @@
+"use client";
+
+import { useRef, useState } from "react";
 import Container from "./Container";
 import Photo from "./Photo";
-import Reveal from "./Reveal";
-import SectionHeading from "./SectionHeading";
 import { images } from "@/lib/site";
 
-const zones: {
-  name: string;
-  desc: string;
-  src: string;
-  /** 그리드 span */
-  span: string;
-  height: string;
-  sizes: string;
-  /** 크롭 기준점 */
-  position: string;
-  /** 전체 폭으로 크게 보여줄 카드 */
-  feature?: boolean;
-}[] = [
-  {
-    name: "머신존",
-    desc: "다양한 머신으로 체계적인 운동",
-    src: images.machine,
-    /* 비대칭 배치를 위한 그리드 span */
-    span: "lg:col-span-7",
-    height: "h-[300px] sm:h-[420px] lg:h-[560px]",
-    sizes: "(max-width: 1024px) 100vw, 58vw",
-    /* 세로 사진을 가로 영역에 맞추기 위한 크롭 기준점 */
-    position: "center 58%",
-  },
-  {
-    name: "유산소존",
-    desc: "탁 트인 전망과 쾌적한 운동 환경",
-    src: images.cardio,
-    span: "lg:col-span-5",
-    height: "h-[300px] sm:h-[420px] lg:h-[560px]",
-    sizes: "(max-width: 1024px) 100vw, 40vw",
-    position: "center 58%",
-  },
-  {
-    name: "프리웨이트존",
-    desc: "자유로운 무게 운동이 가능한 공간",
-    src: images.freeWeight,
-    span: "lg:col-span-5",
-    height: "h-[300px] sm:h-[380px] lg:h-[480px]",
-    sizes: "(max-width: 1024px) 100vw, 40vw",
-    position: "center 62%",
-  },
-  {
-    name: "스트레칭존",
-    desc: "운동 전후, 더 나은 컨디션을 위한 공간",
-    src: images.stretchingZone,
-    span: "lg:col-span-7",
-    height: "h-[300px] sm:h-[380px] lg:h-[480px]",
-    sizes: "(max-width: 1024px) 100vw, 58vw",
-    position: "center 52%",
-  },
-  {
-    /* 릴랙스존은 전체 폭으로 크게 — 시선이 머물도록 */
-    name: "프리미엄 릴랙스존",
-    desc: "운동 후의 시간까지 생각한 어반짐의 회복 공간",
-    src: images.relax,
-    span: "lg:col-span-12",
-    height: "h-[320px] sm:h-[440px] lg:h-[560px]",
-    sizes: "100vw",
-    position: "center 62%",
-    feature: true,
-  },
+const zones = [
+  { title: "머신 웨이트", image: images.machine, position: "center 63%", description: "다양한 머신을 갖춘 웨이트 공간입니다." },
+  { title: "유산소", image: images.cardio, position: "center 60%", description: "창밖을 바라보며 운동하는 유산소 공간입니다." },
+  { title: "프리 웨이트", image: images.freeWeight, position: "center 65%", description: "랙과 덤벨로 자유롭게 무게 운동을 하는 공간입니다." },
+  { title: "스트레칭", image: images.stretchingZone, position: "center 65%", description: "운동 전후 몸을 풀 수 있는 개인 스트레칭 공간입니다." },
+  { title: "휴식 공간", image: images.relax, position: "center 62%", description: "운동을 마친 뒤 안마의자에서 쉬어가세요." },
 ];
 
 export default function Facilities() {
+  const [active, setActive] = useState(0);
+  const tabs = useRef<(HTMLButtonElement | null)[]>([]);
+  const select = (index: number) => { setActive(index); tabs.current[index]?.focus(); };
   return (
-    <section id="facility" className="bg-warm-100 py-24 md:py-32 lg:py-40">
+    <section id="facility" className="facility-section section-space">
       <Container>
-        <SectionHeading
-          eyebrow="Our Space"
-          title="공간으로 느껴지는 차이"
-          aside={["넓고 쾌적한 공간,", "직접 경험해보세요."]}
-        />
-
-        <div className="mt-16 grid gap-5 lg:mt-20 lg:grid-cols-12">
-          {zones.map((zone, i) => (
-            <Reveal
-              key={zone.name}
-              delay={(i % 2) * 100}
-              className={zone.span}
-            >
-              <article className="group relative h-full overflow-hidden rounded-lg">
-                <Photo
-                  src={zone.src}
-                  alt={`어반짐 ${zone.name}`}
-                  sizes={zone.sizes}
-                  position={zone.position}
-                  className={`w-full ${zone.height}`}
-                />
-
-                {/* 텍스트 가독성을 위한 그라데이션 오버레이 */}
-                <div
-                  aria-hidden="true"
-                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/75 via-ink/15 to-transparent"
-                />
-
-                <div
-                  className={`absolute inset-x-0 bottom-0 p-7 ${
-                    zone.feature ? "lg:p-12" : "lg:p-9"
-                  }`}
-                >
-                  <h3
-                    className={`font-semibold tracking-[-0.015em] text-warm-50 ${
-                      zone.feature
-                        ? "text-[23px] lg:text-[30px]"
-                        : "text-[21px] lg:text-[23px]"
-                    }`}
-                  >
-                    {zone.name}
-                  </h3>
-                  <p
-                    className={`mt-2 max-w-[36ch] leading-[1.75] text-warm-200 ${
-                      zone.feature
-                        ? "text-[15px] lg:text-[16.5px]"
-                        : "max-w-[28ch] text-[14.5px] lg:text-[15px]"
-                    }`}
-                  >
-                    {zone.desc}
-                  </p>
-                  <span className="mt-5 block h-px w-10 origin-left bg-warm-50/70 transition-[scale] duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-[2.6]" />
-                </div>
-              </article>
-            </Reveal>
+        <div className="section-head">
+          <h2>공간부터<br />둘러보세요.</h2>
+          <p>웨이트부터 스트레칭, 운동 후 휴식까지.<br />어반짐의 실제 시설을 담았습니다.</p>
+        </div>
+        <div className="zone-tabs" role="tablist" aria-label="운동 공간 선택">
+          {zones.map((zone, index) => (
+            <button key={zone.title} ref={(element) => { tabs.current[index] = element; }} type="button" role="tab" id={"zone-tab-" + index} aria-controls={"zone-panel-" + index} aria-selected={active === index} tabIndex={active === index ? 0 : -1} onClick={() => setActive(index)} onKeyDown={(event) => {
+              let next = index;
+              if (event.key === "ArrowRight") next = (index + 1) % zones.length;
+              else if (event.key === "ArrowLeft") next = (index + zones.length - 1) % zones.length;
+              else if (event.key === "Home") next = 0;
+              else if (event.key === "End") next = zones.length - 1;
+              else return;
+              event.preventDefault(); select(next);
+            }}>{zone.title}</button>
           ))}
         </div>
+        {zones.map((zone, index) => (
+          <div key={zone.title} id={"zone-panel-" + index} role="tabpanel" aria-labelledby={"zone-tab-" + index} hidden={active !== index} tabIndex={0} className="zone-panel">
+            <Photo src={zone.image} alt={"어반짐 평거점 " + zone.title} position={zone.position} className="zone-photo" zoom={false} sizes="(max-width: 768px) 100vw, 90vw" />
+            <div className="zone-caption"><p>{zone.description}</p><span aria-label={"전체 5개 공간 중 " + (index + 1) + "번째"}>{String(index + 1).padStart(2, "0")} / 05</span></div>
+          </div>
+        ))}
       </Container>
     </section>
   );

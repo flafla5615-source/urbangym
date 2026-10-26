@@ -23,3 +23,9 @@ yarn-error.log*
 
 *.tsbuildinfo
 next-env.d.ts
+
+/_workspace/
+/.impeccable/review/
+/.impeccable/mocks/
+/.impeccable/questions/
+/.impeccable/urban-options.json
